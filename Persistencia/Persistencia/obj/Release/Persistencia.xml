@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Persistencia
+</name>
+</assembly>
+<members>
+<member name="M:Persistencia.pPersistente.EjecutarNonQuery(System.String)">
+	<summary>Ejecuta una sentencia y retorna el valor de la primer fila, primer columna</summary>
+</member>
+</members>
+</doc>

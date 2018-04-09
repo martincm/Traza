@@ -1,0 +1,250 @@
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.exe
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Inicio.exe
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Inicio.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Inicio.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dac.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dominio.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\office.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dominio.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dac.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Dac.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.pdb
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\bin\Debug\office.xml
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.Actualiza.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.Archivo.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.Balanza.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.BalanzaCamiones.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUArmadoPallet.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAusentismo.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAvisos.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUBrou.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUCaravanas.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUHorasNoProd.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImpresiones.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImprimirEtiquetas.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUIngresoEtiquetas.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUInternet.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IULeerWebService.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporte.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporteResumen.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUTransferencias.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.prueba.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.sorteo.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.splash.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.VistaPrevia.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\Inicio.Resources.resources
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Desktop\Frigoyi\Interface\Interface\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Interface.vbproj.ResolveComReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\bin\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.Actualiza.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.Archivo.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.Balanza.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.BalanzaCamiones.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUArmadoPallet.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAusentismo.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAvisos.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUBrou.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUCaravanas.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUEtiquetas.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUHorasNoProd.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImpresiones.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImprimirEtiquetas.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUIngresoEtiquetas.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUInternet.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IULeerWebService.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporte.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporteOrdenProduccion.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporteResumen.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUTransferencias.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.prueba.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.sorteo.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.splash.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.VistaPrevia.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.Resources.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Interface\Interface\obj\Debug\Inicio.Dgi.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Interface.vbproj.ResolveComReference.cache
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\bin\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoEventos.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoPotreros.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.Resources.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoIdentificacion.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoFormulariosEscaneados.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Inicio.exe.config
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Inicio.exe
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Inicio.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Inicio.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Microsoft.Speech.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\MySql.Data.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Interface.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUBaston.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConfigurarAccesos.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConsultas.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConsultasVarias.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUImportarDatos.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoCategorias.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoEventos.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoEventosDirecto.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoFormulariosEscaneados.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoIdentificacion.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoPotreros.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUPreviaEventos.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUReporteD1.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUReporteOperaciones.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUSubSeleccionArchivo.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Inicio.Resources.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Inicio.exe.config
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.exe
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Inicio.exe
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Inicio.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Inicio.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dac.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dominio.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Microsoft.Speech.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\FlashControlV71.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\ADODB.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\MySql.Data.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\stdole.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dominio.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dac.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Dac.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Interface.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUBaston.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConfigurarAccesos.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConsultas.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUConsultasVarias.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUImportarDatos.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoCategorias.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoEventos.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoEventosDirecto.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoFormulariosEscaneados.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoIdentificacion.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUIngresoPotreros.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUPreviaEventos.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUReporteD1.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUReporteOperaciones.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.IUSubSeleccionArchivo.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Inicio.Resources.resources
+C:\Users\Martin\Desktop\Trazabilidad\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache

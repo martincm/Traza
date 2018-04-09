@@ -1,0 +1,120 @@
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.dll
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.pdb
+D:\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.xml
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+D:\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Debug\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\bin\Release\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Persistencia\Persistencia\obj\Release\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Dac.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Debug\Dac.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Dac.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\bin\Release\Dac.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\Persistencia.Resources.resources
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\Persistencia.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Persistencia\Persistencia\obj\Release\Persistencia.pdb

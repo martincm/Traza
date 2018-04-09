@@ -1,0 +1,4 @@
+Titulo;Ecografia;27/12/2013 12:26:55 p.m.;5
+858000017217304;Hembra;AA;1367;28;Dudosa;0;4;Movimientos;27/12/2013 12:27:58 p.m.
+858000020081922;Macho;AA;18;27;No Ventas;0;4;Movimientos;27/12/2013 12:28:10 p.m.
+858000020081817;Hembra;AA;21;28;Dudosa;0;4;Movimientos;27/12/2013 12:28:26 p.m.

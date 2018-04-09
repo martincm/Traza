@@ -1,0 +1,39 @@
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\Persistencia.Resources.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Persistencia\Persistencia\obj\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.Resources.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\MySql.Data.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.Resources.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Persistencia\Persistencia\obj\x86\Debug\Persistencia.vbproj.GenerateResource.Cache

@@ -1,0 +1,2 @@
+Titulo;Ecografia;27/11/2013 04:30:55 p.m.;2
+858000021170554;Macho;AA;5;25;Moderada pesada;0;6;Estado Corporal;27/11/2013 04:31:13 p.m.

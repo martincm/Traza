@@ -1,0 +1,32 @@
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\bin\x86\Debug\Dac.dll.config
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\Dac.Resources.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dac\obj\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\bin\x86\Debug\Dac.dll.config
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\Dac.Resources.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dac\obj\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\bin\x86\Debug\Dac.dll.config
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\bin\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\bin\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\bin\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.Resources.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dac\obj\x86\Debug\Dac.vbproj.GenerateResource.Cache

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Dac
+</name>
+</assembly>
+<members>
+<member name="T:Dac.DsHorasTrabajadas.HorasTrabajadasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsHorasTrabajadas.HorasTrabajadasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsHorasTrabajadas.HorasTrabajadasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsHorasTrabajadas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsHorasTrabajadasTableAdapters.HorasTrabajadasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsIngresoDesosado.auxingdesosadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsIngresoDesosado.auxingdesosadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsIngresoDesosado.auxingdesosadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsIngresoDesosado">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsIngresoDesosadoTableAdapters.auxingdesosadoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsCajaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.dscabezalcajas.cabezalcajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.dscabezalcajas.cabezalcajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.dscabezalcajas.cabezalcajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.dscabezalcajas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.dscabezalcajasTableAdapters.cabezalcajaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsCaravanas.FaltantesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsCaravanas.FaltantesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsCaravanas.FaltantesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsCaravanas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsCaravanasTableAdapters.FaltantesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsParametro.ParametrosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsParametro.ParametrosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsParametro.ParametrosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsParametro">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsParametroTableAdapters.ParametrosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsProductos.CODINFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsProductos.CODINFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsProductos.CODINFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsProductos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsProductosTableAdapters.CODINFTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsAusentismo.AuxAusentismoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsAusentismo.ResumenAusentismoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsAusentismo.AuxAusentismoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsAusentismo.ResumenAusentismoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsAusentismo.AuxAusentismoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsAusentismo.ResumenAusentismoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsAusentismo">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsAusentismoTableAdapters.AuxAusentismoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsAusentismoTableAdapters.ResumenAusentismoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsCaja.cajasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsCaja.cajasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsCaja.cajasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsCaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsCajaTableAdapters.cajasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsTransferencia.TransferenciaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsTransferencia.TransferenciaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsTransferencia.TransferenciaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsTransferencia">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsTransferenciaTableAdapters.TransferenciaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsConcepto.conceptosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsConcepto.conceptosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsConcepto.conceptosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsConcepto">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsConceptoTableAdapters.conceptosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Dac.DsPersonal.HORASNOPRODDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Dac.DsPersonal.HORASNOPRODRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Dac.DsPersonal.HORASNOPRODRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Dac.DsPersonal">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Dac.DsPersonalTableAdapters.HORASNOPRODTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+</members>
+</doc>

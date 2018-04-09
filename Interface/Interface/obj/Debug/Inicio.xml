@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Inicio
+</name>
+</assembly>
+<members>
+<member name="T:Inicio.My.Resources.Resources">
+<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Inicio.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Inicio.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member>
+<member name="M:Inicio.Thumbnail.ResizePicture_MatrixByScale(System.String,System.Single)">
+ <summary>
+ 
+ </summary>
+ <param name="Filename">Nombre del fichero gráfico que se va a redimensionar</param>
+ <param name="Scale">Factor de escala. Valores menores de 1 reducen la imagen. Valores mayores de 1 la agrandan</param>
+ <returns>un objeto bitmap</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Inicio.Thumbnail.ResizePicture_MatrixByWidth(System.String,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="Filename">Nombre del fichero gráfico que se va a redimensionar</param>
+ <param name="FinalWidth">Ancho del Thumbnail. La altura se reajusta automáticamente</param>
+ <returns>objeto bitmap</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Inicio.Thumbnail.ResizePicture_MatrixByHeight(System.String,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="Filename">Nombre del fichero gráfico que se va a redimensionar</param>
+ <param name="FinalHeight">Altura del Thumbnail. El ancho se reajusta automáticamente</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Inicio.Thumbnail.MakeThumbnail_FixedSize(System.String,System.Int32,System.Int32,System.Drawing.Color)">
+ <summary>
+ 
+ </summary>
+ <param name="Filename">Nombre del fichero gráfico que se va a redimensionar</param>
+ <param name="FinalWidth">Ancho del Thumbnail</param>
+ <param name="FinalHeight">Alto del Thumbnail</param>
+ <param name="ColorFill">Color con el que se rellena el fondo del thumbnail en caso de tener que centrar el thumbnail</param>
+ <returns></returns>
+ <remarks></remarks>    
+</member>
+</members>
+</doc>

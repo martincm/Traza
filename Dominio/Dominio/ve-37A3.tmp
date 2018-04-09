@@ -1,0 +1,3667 @@
+Imports System.Xml.Serialization
+Imports System.IO
+Imports Dac, Persistencia
+Imports System
+Imports System.ComponentModel
+Imports System.Diagnostics
+Imports System.Web.Services
+Imports System.Web.Services.Protocols
+Imports Dac.DsIngresoDesosado
+Imports System.Data.OleDb
+Imports System.Net.Mail
+
+
+
+Public Class Fachada
+    Private Cnn As OleDb.OleDbConnection
+
+    Private Shared mCadenaConexionAuxChronos As String = _
+          "Provider=Microsoft.Jet.OleDb.4.0; Data Source= \\servidordb\Prueba Martin\BaseAuxChronos.mdb "
+
+    Private Shared mCadenaConexionReloj As String = _
+         "Provider=Microsoft.Jet.OleDb.4.0; Data Source= \\servidordb\Chronos\GX_DATA.MDB "
+
+    Private Shared mCadenaConexionCaravanas As String = "Provider=Microsoft.Jet.OleDb.4.0; Data Source=" & Environment.CurrentDirectory & "\caravanas.mdb"
+
+    Private Shared mCadenaConexionPersonal As String = _
+     "Provider=Microsoft.Jet.OleDb.4.0; Data Source= \\servidordb\Frigo\Personal.MDB "
+
+    Private Shared mCadenaConexionBaseEnServidor As String = _
+     "Provider=Microsoft.Jet.OleDb.4.0; Data Source= \\servidordb\Prueba Martin\BaseEtiquetas.mdb "
+
+
+
+
+
+
+
+    Protected Shared Function ConectarAuxChronos() As OleDbConnection
+        Try
+            Return New OleDbConnection(mCadenaConexionAuxChronos)
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Protected Shared Function CadenaConexionBaseEnServidor() As OleDbConnection
+        Try
+            Return New OleDbConnection(mCadenaConexionBaseEnServidor)
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+
+    Protected Shared Function ConectarReloj() As OleDbConnection
+
+        Try
+            Return New OleDbConnection(mCadenaConexionReloj)
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Protected Shared Function ConectarCaravanas() As OleDbConnection
+        Try
+            Return New OleDbConnection(mCadenaConexionCaravanas)
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Protected Shared Function ConectarPersonal() As OleDbConnection
+        Try
+            Return New OleDbConnection(mCadenaConexionPersonal)
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+
+    Dim StrComando As String
+    Dim adapter As New OleDbDataAdapter
+    Dim Cb As OleDbCommandBuilder
+    Dim copia As New DataSet
+    Private StrConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Auxiliar.mdb;Persist Security Info=False"
+
+    'Coneccion con RELOJ Chronos
+    Dim StrComandoReloj As String
+    Dim adapterReloj As New OleDbDataAdapter
+    Dim CbReloj As OleDbCommandBuilder
+    Dim copiaReloj As New DataSet
+    Private StrConexionReloj As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Chronos\GX_DATA.MDB;Persist Security Info=False"
+    'FIN
+
+
+    Private _nombre As String
+    Private _fecha As Date
+    Private _listaTelefonos As List(Of String)
+    Private _ListaInformados As List(Of Informados)
+    Private _ListaTransferencias As List(Of ImportarTransferencia)
+
+    Public Property nombre() As String
+        Get
+            Return Me._nombre
+        End Get
+        Set(ByVal value As String)
+            Me._nombre = value
+        End Set
+    End Property
+
+    Public Property listaTelefonos() As List(Of String)
+        Get
+            Return Me._listaTelefonos
+        End Get
+        Set(ByVal value As List(Of String))
+            Me._listaTelefonos = value
+        End Set
+    End Property
+
+    Public Property ListaTransferencias() As List(Of ImportarTransferencia)
+        Get
+            Return Me._ListaTransferencias
+        End Get
+        Set(ByVal value As List(Of ImportarTransferencia))
+            Me._ListaTransferencias = value
+        End Set
+    End Property
+
+    Public Property listaInformados() As List(Of Informados)
+        Get
+            Return Me._ListaInformados
+        End Get
+        Set(ByVal value As List(Of Informados))
+            Me._ListaInformados = value
+        End Set
+    End Property
+
+
+
+
+    'RELOJ
+
+
+    Public Function HorasNoProductivas() As DataSet
+        Dim cadenaConsulta As String = "SELECT * FROM HorasNoProductivas order by MaxFecha DESC"
+        Dim DsHorasNoProd As DataSet
+        DsHorasNoProd = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsHorasNoProd
+    End Function
+
+
+
+    Public Function TodasLosHorariosCentrales() As DataTable
+        StrConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Chronos\GX_DATA.MDB;Persist Security Info=False"
+        StrComando = "SELECT * FROM HORARIOCENTRAL order by (CentralFecha)"
+        adapter = New OleDbDataAdapter(StrComando, StrConexion)
+        Cb = New OleDbCommandBuilder(adapter)
+        adapter.Fill(copia, "HORARIOCENTRAL")
+        Return copia.Tables("HORARIOCENTRAL")
+    End Function
+
+
+
+    Public Function TodasLasInasistencias(ByVal ini As Date, ByVal fin As Date) As DataTable
+        'StrConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Chronos\GX_DATA.MDB;Persist Security Info=False"
+        'StrComando = "select * from INASISTENCIA WHERE InasistenciaFecha2 >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  InasistenciaFecha <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  order by InasistenciaDesde"
+        'adapter = New OleDbDataAdapter(StrComando, StrConexion)
+        'Cb = New OleDbCommandBuilder(adapter)
+        'adapter.Fill(copia, "INASISTENCIA")
+        'Return copia.Tables("INASISTENCIA")
+    End Function
+
+
+    Public Function BuscarEmspleado(ByVal pnumeroOperario As Integer) As DataRow
+        'Dim cadenaConsulta As String = "select * from EMPLEADO where EmpleadoID = " & pnumeroOperario
+
+        'Dim DSEMPLEADO As DataSet
+        'DSEMPLEADO = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        'Dim unaFila As DataRow
+        'For Each unaFila In DSEMPLEADO.Tables(0).Rows
+        '    Return unaFila
+        'Next
+        'Return Nothing
+    End Function
+
+
+    Public Function TodasLasSecciones() As DataSet
+        Dim cadenaConsulta As String = "select * from SECCIONES order by SeccionId"
+        Dim DsSecciones As DataSet
+        DsSecciones = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsSecciones
+    End Function
+
+    Public Function TodasLasCabezas() As DataSet
+        Dim cadenaConsulta As String = "select * from AUXFAENA order by fecha"
+        Dim dsCabezas As DataSet
+        dsCabezas = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return dsCabezas
+    End Function
+
+    Public Function TodosCargoValor() As DataSet
+        Dim cadenaConsulta As String = "select * from AUXCARGOVALOR order by idcargo"
+        Dim dsAuxCargoValor As DataSet
+        dsAuxCargoValor = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return dsAuxCargoValor
+    End Function
+
+    Public Function TodosAuxJornales() As DataSet
+        Dim cadenaConsulta As String = "select * from AuxValorJornal order by op"
+        Dim DsAuxValorJornal As DataSet
+        DsAuxValorJornal = EjecutarSQL(cadenaConsulta, Fachada.CadenaConexionBaseEnServidor)
+        Return DsAuxValorJornal
+    End Function
+
+
+    Public Function OrdendeFaenaAuxiliar() As DataSet
+        Dim cadenaConsulta As String = "select * from OrdenFaena order by ordenno"
+        Dim DsAuxValorJornal As DataSet
+        DsAuxValorJornal = EjecutarSQL(cadenaConsulta, Fachada.CadenaConexionBaseEnServidor)
+        Return DsAuxValorJornal
+    End Function
+
+
+
+
+
+    Public Function EliminarContenidoTablaAusentismo(ByVal pmes As Date) As DataSet
+        Dim BorarTablaAusentismo As New AusentismoHoras
+        Return BorarTablaAusentismo.EliminarContenido(pmes)
+    End Function
+
+    Public Function EliminarContenidoTablaTransferencias() As DataSet
+        Dim BorarTabla As New Transferencia
+        Return BorarTabla.EliminarContenido
+    End Function
+
+
+    Public Function EliminarContenidoTablaAusentismoResumen(ByVal pmes As Date) As DataSet
+        Dim BorarTablaAusentismo As New AusentismoHoras
+        Return BorarTablaAusentismo.EliminarContenidoResumen(pmes)
+    End Function
+
+
+
+
+
+    Public Function TodasLosEmpleados() As DataSet
+        Dim cadenaConsulta As String = "select * from EMPLEADO order by EmpleadoID"
+        Dim DsEmpleados As DataSet
+        DsEmpleados = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsEmpleados
+    End Function
+
+    Public Function TodasLosEmpleados1Año(ByVal ini As Date, ByVal fin As Date, ByVal pActivo As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from EMPLEADO WHERE EmpleadoFechaIngreso >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  EmpleadoFechaIngreso <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoInactivo =" & pActivo & " order by EmpleadoFechaIngreso"
+        Dim DsEmpleados As DataSet
+        DsEmpleados = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsEmpleados
+    End Function
+
+    Public Function TodasLosEmpleadosJornales(ByVal ini As Date, ByVal fin As Date, ByVal pActivo As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from EMPLEADO WHERE EmpleadoFechaIngreso >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  EmpleadoFechaIngreso <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoInactivo =" & pActivo & " order by EmpleadoID"
+        Dim DsEmpleados As DataSet
+        DsEmpleados = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsEmpleados
+    End Function
+
+
+    Public Function TodosHorarioCentral(ByVal ini As Date, ByVal fin As Date) As DataSet
+        Dim cadenaConsulta As String = "select * from HORARIOCENTRAL WHERE CentralFecha >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  CentralFecha <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  order by CentralFecha"
+        Dim DsHorarioCentral As DataSet
+        DsHorarioCentral = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsHorarioCentral
+    End Function
+
+
+
+    Public Function TodasLosMotivosInasistencia() As DataSet
+        Dim cadenaConsulta As String = "select * from MOTIVOINASISTENCIA order by MotivoInasistenciaId"
+        Dim dsMotivoInasistencia As DataSet
+        dsMotivoInasistencia = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return dsMotivoInasistencia
+    End Function
+
+
+    Public Function BuscarHorasHorarioCentral(ByVal pfecha As Date, ByVal pseccion As Integer, ByVal dataHorariosCentrales As DataSet) As DataRow
+        For Each rw As DataRow In dataHorariosCentrales.Tables(0).Rows
+            Dim fecha2 = rw(0)
+            pfecha = DateSerial(Year(pfecha), Month(pfecha), DateAndTime.Day(pfecha))
+            Dim seccion2 = rw(1)
+            If pfecha = fecha2 And pseccion = seccion2 Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+    Public Function BuscarNombreSeccion(ByVal Idseccion As Integer, ByVal dataSecciones As DataSet) As String
+        For Each rw As DataRow In dataSecciones.Tables(0).Rows
+            If Idseccion = rw(0).ToString() Then
+                Return rw(1).ToString()
+            End If
+        Next rw
+    End Function
+
+    Public Function BuscarMotivoInasistencia(ByVal pIdMotivoInasis As Integer, ByVal dataInasistencia As DataSet) As DataRow
+        For Each rw As DataRow In dataInasistencia.Tables(0).Rows
+            If pIdMotivoInasis = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+
+
+
+    Public Function BuscarNombreEmpleado(ByVal pIdOperario As Integer, ByVal dataOperario As DataSet) As DataRow
+        For Each rw As DataRow In dataOperario.Tables(0).Rows
+            If pIdOperario = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+    Public Function BuscarCaravana(ByVal pOrdinal As Integer, ByVal dataCaravanas As DataSet) As DataRow
+        For Each rw As DataRow In dataCaravanas.Tables(0).Rows
+            If pOrdinal = rw(2) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+    Public Function BuscarAuxJornal(ByVal pIdOperario As Integer, ByVal dataAuxJornal As DataSet) As DataRow
+        For Each rw As DataRow In dataAuxJornal.Tables(0).Rows
+            If pIdOperario = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+    Public Function BuscarCargoValor(ByVal pIdCargo As Integer, ByVal DataCargosValor As DataSet) As DataRow
+        For Each rw As DataRow In DataCargosValor.Tables(0).Rows
+            If pIdCargo = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+    Public Function BuscarCabezas(ByVal pfecha As Date, ByVal dataCabezas As DataSet) As DataRow
+        For Each rw As DataRow In dataCabezas.Tables(0).Rows
+            If pfecha = rw(1) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+
+
+    Public Function BuscarHorasNoProd(ByVal pquincena As String, ByVal pmes As Date) As DataRow
+        Dim cadenaConsulta As String = "select * from HORASNOPROD WHERE mesdeliq = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "# " & "order by quincena"
+
+        Dim DsHorasNoProductivas As DataSet
+        DsHorasNoProductivas = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        If DsHorasNoProductivas.Tables(0).Rows.Count > 0 Then
+            For Each rw As DataRow In DsHorasNoProductivas.Tables(0).Rows
+                If pquincena = rw(3) Then
+                    Return rw
+                End If
+            Next rw
+        End If
+        Return Nothing
+    End Function
+
+
+
+    Public Function TraerMarcas(ByVal ini As Date, ByVal fin As Date, ByVal idOperario As Integer, ByVal pMarcaIDE As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & idOperario & " and MarcaIDE =" & pMarcaIDE & " order by EmpleadoID,MarcaFechaJornada"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsInasistencias As DataSet
+        DsInasistencias = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsInasistencias
+    End Function
+
+
+    Public Function TraerAjustesHoras(ByVal ini As Date, ByVal fin As Date, ByVal idOperario As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from LIQPARALELO WHERE LiqParaleloFecha >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  LiqParaleloFecha <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & idOperario & " order by EmpleadoID"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAjustesHoras As DataSet
+        DsAjustesHoras = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsAjustesHoras
+    End Function
+
+    Public Function TraerAjustesHorasUnDia(ByVal fecha As Date, ByVal idOperario As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from LIQPARALELO WHERE LiqParaleloFecha = #" & fecha.Month & "/" & fecha.Day & "/" & fecha.Year & "# and EmpleadoID =" & idOperario & " order by EmpleadoID"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAjustesHoras As DataSet
+        DsAjustesHoras = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsAjustesHoras
+    End Function
+
+    Public Function TraerAjustesHorasAutomaticoUnDia(ByVal pfecha As Date, ByVal idOperario As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from LIQHORAS WHERE LiqHoraFecha = #" & pfecha.Month & "/" & pfecha.Day & "/" & pfecha.Year & "# and EmpleadoID =" & idOperario & " order by EmpleadoID"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAjustesHoras As DataSet
+        DsAjustesHoras = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsAjustesHoras
+    End Function
+
+
+
+    Public Function TraerAjustesHorasAutomatico(ByVal ini As Date, ByVal fin As Date, ByVal idOperario As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from LIQHORAS WHERE LiqHoraFecha >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  LiqHoraFecha <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & idOperario & " order by EmpleadoID"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAjustesHoras As DataSet
+        DsAjustesHoras = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsAjustesHoras
+    End Function
+
+
+
+    Public Function IngresarHorasNoProductivas(ByVal pfecha As Date, ByVal pquincena As String) As Boolean
+        Dim DataHorasNoProductivas As DataSet = HorasNoProductivas()
+        Dim bandera As Boolean = False
+
+        If DataHorasNoProductivas.Tables(0).Rows.Count > 0 Then
+            Dim i As Integer = 0
+
+            Do While i < DataHorasNoProductivas.Tables(0).Rows.Count
+                Dim IdEmpleado As Integer
+                Dim cedula As String
+                Dim HorasNoProd As Double
+                Dim SeccionNombre As String
+                Dim SeccionId As Integer
+                Dim MaxFecha As Date
+                MaxFecha = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("MaxFecha"), Date)
+
+
+
+                If MaxFecha.Month <> pfecha.Month Then
+                    MsgBox("Diferentes Meses: Exporte Horas desde Frigo")
+                    MsgBox("Desde Frigo Ingrese Menu: Personal//calculo prod. x animal y seleccione quincena")
+                    bandera = False
+                    Exit Do
+                End If
+
+                If MaxFecha.Day <= 15 And pquincena = "2ª quincena" Then
+                    MsgBox("Seleccione bien la quincena o exporte de nuevo desde Frigo")
+                    MsgBox("Desde Frigo Ingrese Menu: Personal//calculo prod. x animal y seleccione quincena")
+                    bandera = False
+                    Exit Do
+                End If
+
+                If MaxFecha.Day >= 16 And pquincena = "1ª quincena" Then
+                    MsgBox("Seleccione bien la quincena o exporte de nuevo desde Frigo")
+                    MsgBox("Desde Frigo Ingrese Menu: Personal//calculo prod. x animal y seleccione quincena")
+                    bandera = False
+                    Exit Do
+                End If
+
+
+                IdEmpleado = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("Id"), Integer)
+                cedula = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("cedula"), String)
+                HorasNoProd = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("HorasNoProd"), Double)
+                SeccionNombre = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("SeccionNombre"), String)
+                SeccionId = CType(DataHorasNoProductivas.Tables(0).Rows(i).Item("SeccionId"), Integer)
+
+
+                Dim PrimerDia As Date
+                Dim UltimoDia As Date
+                PrimerDia = DateSerial(Year(MaxFecha), Month(MaxFecha) + 0, 1)
+                UltimoDia = DateSerial(Year(MaxFecha), Month(MaxFecha) + 1, 0)
+                Dim unpaustentismo As New pAusentismo
+                unpaustentismo.GuardarHorasNoProductivas(IdEmpleado, PrimerDia, pquincena, HorasNoProd)
+                i += 1
+            Loop
+
+        End If
+
+        Return bandera
+    End Function
+
+
+    Public Function EjecutarConsulta(ByVal NombreConsulta As String, ByVal pdesde As Date, ByVal phasta As Date) As Boolean
+        Dim cmd As OleDb.OleDbCommand
+        Dim retorno As Boolean = False
+        'Me conecto a la base
+        Conectar()
+
+        'Establezo cual es la consulta a ejecutar
+        cmd = New OleDb.OleDbCommand(NombreConsulta, Cnn)
+
+        'Avisamos que vamos a ejecutar una "Consulta"
+        cmd.CommandType = CommandType.StoredProcedure
+
+        'Cargo los valores de los campos
+        Dim Desde As String = pdesde.Day & "/" & pdesde.Month & "/" & pdesde.Year
+        Dim Hasta As String = phasta.Day & "/" & phasta.Month & "/" & phasta.Year
+        CargarParametros(cmd.Parameters, Desde, Hasta)
+
+        'Ejecuto el comando
+        Try
+            cmd.ExecuteNonQuery()
+            retorno = True
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            retorno = False
+        End Try
+        'Me desconecto de la base
+        Desconectar()
+        Return retorno
+    End Function
+
+    Public Function EjecutarConsultaEnDatos(ByVal NombreConsulta As String, ByVal pdesde As Date, ByVal phasta As Date) As Boolean
+        Dim cmd As OleDb.OleDbCommand
+        Dim retorno As Boolean = False
+        'Me conecto a la base
+        ConectarDATOS()
+
+        'Establezo cual es la consulta a ejecutar
+        cmd = New OleDb.OleDbCommand(NombreConsulta, Cnn)
+
+        'Avisamos que vamos a ejecutar una "Consulta"
+        cmd.CommandType = CommandType.StoredProcedure
+
+        'Cargo los valores de los campos
+        Dim Desde As String = pdesde.Day & "/" & pdesde.Month & "/" & pdesde.Year
+        Dim Hasta As String = phasta.Day & "/" & phasta.Month & "/" & phasta.Year
+        CargarParametros(cmd.Parameters, Desde, Hasta)
+
+        'Ejecuto el comando
+        Try
+            cmd.ExecuteNonQuery()
+            retorno = True
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            retorno = False
+        End Try
+        'Me desconecto de la base
+        Desconectar()
+        Return retorno
+    End Function
+
+
+    Public Function EjecutarConsultaEnGXDATA(ByVal NombreConsulta As String) As Boolean
+        Dim cmd As OleDb.OleDbCommand
+        Dim retorno As Boolean = False
+        'Me conecto a la base
+        ConectarGXDATA()
+
+        'Establezo cual es la consulta a ejecutar
+        cmd = New OleDb.OleDbCommand(NombreConsulta, Cnn)
+
+        'Avisamos que vamos a ejecutar una "Consulta"
+        cmd.CommandType = CommandType.StoredProcedure
+
+        ''Cargo los valores de los campos
+        'Dim Desde As String = pdesde.Day & "/" & pdesde.Month & "/" & pdesde.Year
+        'Dim Hasta As String = phasta.Day & "/" & phasta.Month & "/" & phasta.Year
+        'CargarParametros(cmd.Parameters, Desde, Hasta)
+
+        'Ejecuto el comando
+        Try
+            cmd.ExecuteNonQuery()
+            retorno = True
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            retorno = False
+        End Try
+        'Me desconecto de la base
+        Desconectar()
+        Return retorno
+    End Function
+
+
+    Public Sub EliminarTablaBaseEtiquetas(ByVal ptabla As String)
+        Dim BorarTabla As New Transferencia
+        BorarTabla.EliminarTabla(ptabla)
+    End Sub
+
+    Public Sub EliminarTablaAuxCrhonos(ByVal ptabla As String)
+        Dim BorarTabla As New AusentismoHoras
+        BorarTabla.EliminarTabla(ptabla)
+    End Sub
+
+
+
+    Public Sub EliminarTablaenChronos(ByVal ptabla As String)
+        Dim BorarTabla As New AusentismoHoras
+        BorarTabla.EliminarTablaChronos(ptabla)
+    End Sub
+   
+
+
+    Private Sub CargarParametros(ByRef Parametros As OleDb.OleDbParameterCollection, ByVal pDesde As String, ByVal pHasta As String)
+        'Cargo los valores de los parametros
+        With Parametros
+            .Add("DESDE", pDesde)
+            .Add("HASTA", pHasta)
+        End With
+    End Sub
+
+    Public Sub Conectar()
+        Cnn = New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\FRIGO\Personal.mdb")
+        Cnn.Open()
+    End Sub
+
+    Public Sub ConectarGXDATA()
+        Cnn = New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Chronos\GX_DATA.MDB")
+        Cnn.Open()
+    End Sub
+
+    Public Sub ConectarDATOS()
+        Cnn = New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Frigo\DATOS.MDB")
+        Cnn.Open()
+    End Sub
+
+
+    Public Sub Desconectar()
+        Cnn.Close()
+    End Sub
+
+
+
+
+    Public Function CalcularAusentismo(ByVal ini As Date, ByVal fin As Date, ByVal pTodosLasHorasTrabajadas As DataSet) As List(Of AusentismoHoras)
+        Dim colRetorno As New List(Of AusentismoHoras)
+        Dim cadenaConsulta As String = "select * from INASISTENCIA WHERE InasistenciaFecha2 >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  InasistenciaFecha <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "# and MotivoInasistenciaId <> 24 and MotivoInasistenciaId <> 37  order by EmpleadoId"
+        Dim DsInasistencias As DataSet
+        DsInasistencias = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        '  Dim unaFila As DataRow
+        Dim i As Integer = 0
+        Dim EmpleadoIdAnt As Integer
+        Dim TerminaEmpleado As Boolean
+        Dim hcomunes As Decimal
+        Dim hnocturnas As Decimal
+        Dim hextras As Decimal
+        Dim hextrasNoc As Decimal
+
+        Dim DataSecciones As DataSet = TodasLasSecciones()
+        Dim DataHorariosCentrales As DataSet = TodosHorarioCentral(ini, fin)
+        Dim dataInasistencia As DataSet = TodasLosMotivosInasistencia()
+
+        'CARGO DATA CON TODOS LOS EMPLEADOS 
+        Dim DataEmpleados As DataSet = TodasLosEmpleados()
+        If DsInasistencias.Tables(0).Rows.Count > 0 Then
+            Do While i < DsInasistencias.Tables(0).Rows.Count
+                TerminaEmpleado = False
+                'Seteo Horas a CERO
+                hcomunes = 0.0
+                hnocturnas = 0.0
+                hextras = 0.0
+                hextrasNoc = 0.0
+                EmpleadoIdAnt = CType(DsInasistencias.Tables(0).Rows(i).Item("EmpleadoId"), Integer)
+                If EmpleadoIdAnt = 776 Then
+                    Dim a As Integer = 1
+                End If
+                Dim Operario As Data.DataRow = BuscarNombreEmpleado(EmpleadoIdAnt, DataEmpleados)
+                If Not Operario Is Nothing Then
+                    Dim apellidos As String = Operario(1)
+                    Dim nombres As String = Operario(2)
+
+                    Do While i < DsInasistencias.Tables(0).Rows.Count And Not TerminaEmpleado
+                        Dim unRegistro As New AusentismoHoras
+                        Dim seccion As Integer = CInt(Operario(19))
+                        Dim numMotivo As Integer = CType(DsInasistencias.Tables(0).Rows(i).Item("MotivoInasistenciaId"), Integer)
+
+                        Dim CantDias As Integer = 0
+                        Dim conta As Integer = 0
+
+                        unRegistro.numeroOp = EmpleadoIdAnt
+                        'If EmpleadoIdAnt = 156 Then
+                        '    MsgBox("as")
+                        'End If
+
+                        unRegistro.nombre = apellidos & " " & nombres
+                        unRegistro.motivo = BuscarMotivoInasistencia(numMotivo, dataInasistencia)(1)
+                        unRegistro.numeroMotivo = numMotivo
+                        unRegistro.desde = CType(DsInasistencias.Tables(0).Rows(i).Item("InasistenciaFecha"), Date)
+                        unRegistro.hasta = CType(DsInasistencias.Tables(0).Rows(i).Item("InasistenciaFecha2"), Date)
+                        unRegistro.seccion = BuscarNombreSeccion(Operario(19), DataSecciones)
+                        '  Dim nom As String = BuscarNombreSeccion(seccion, DataSecciones)
+                        Dim fechaini As Date
+
+                        If unRegistro.desde = unRegistro.hasta Then
+                            If numMotivo = 4 Then
+                                CantDias = DateDiff(DateInterval.Day, unRegistro.desde, fin)
+                                fechaini = unRegistro.desde
+                            Else
+                                CantDias = 0
+                                fechaini = unRegistro.desde
+                            End If
+
+                        Else
+                            Dim AuxFin As Date = fin
+
+                            If unRegistro.hasta < AuxFin Then
+                                'USO FECHA FINAL HASTA
+                                AuxFin = unRegistro.hasta
+                                If unRegistro.desde > ini Then
+                                    If unRegistro.desde = AuxFin Then
+                                        CantDias = 0
+                                        fechaini = unRegistro.desde
+                                    Else
+                                        CantDias = DateDiff(DateInterval.Day, unRegistro.desde, AuxFin)
+                                        fechaini = unRegistro.desde
+                                    End If
+
+                                Else
+                                    If unRegistro.desde = AuxFin Then
+                                        CantDias = 0
+                                        fechaini = unRegistro.desde
+                                    Else
+                                        CantDias = DateDiff(DateInterval.Day, ini, AuxFin)
+                                        fechaini = ini
+                                    End If
+                                End If
+
+                            Else
+                                'USO FECHA FINAL MI VARIABLE (ELEGIDA)
+                                If unRegistro.desde > ini Then
+                                    If unRegistro.desde = fin Then
+                                        CantDias = 0
+                                        fechaini = unRegistro.desde
+                                    Else
+                                        CantDias = DateDiff(DateInterval.Day, unRegistro.desde, fin)
+                                        fechaini = unRegistro.desde
+                                    End If
+
+                                Else
+                                    If unRegistro.desde = fin Then
+                                        CantDias = 0
+                                        fechaini = unRegistro.desde
+                                    Else
+                                        CantDias = DateDiff(DateInterval.Day, ini, fin)
+                                        fechaini = ini
+                                    End If
+
+                                End If
+
+                            End If
+
+                        End If
+
+                        Do While True
+                            unRegistro.fecha = DateAdd(DateInterval.Day, conta, fechaini)
+                            Dim mes As Date = unRegistro.fecha
+                            mes = DateSerial(Year(mes), Month(mes) + 0, 1)
+                            unRegistro.MesAusentismo = mes
+
+
+                            If seccion = 59 OrElse seccion = 29 OrElse seccion = 11 OrElse seccion = 26 OrElse seccion = 45 OrElse seccion = 71 OrElse seccion = 30 OrElse seccion = 39 OrElse seccion = 74 OrElse seccion = 33 OrElse seccion = 36 OrElse seccion = 102 OrElse seccion = 16 OrElse seccion = 23 OrElse seccion = 40 Then
+                                'SECCIONES SIN HORARIO CENTRAL
+                                If seccion = 40 Then
+                                    'Secciones Varias
+                                    Dim d As Integer
+                                    If d = 1 OrElse d = 7 Then
+                                        unRegistro.hcomunes = 0
+                                    Else
+                                        unRegistro.hcomunes = 9
+                                    End If
+                                    unRegistro.hnocturnas = 0
+                                    unRegistro.hextras = 0
+                                    unRegistro.hextranoc = 0
+                                Else
+                                    Dim dataAjustes As DataSet = TraerAjustesHoras(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+                                    'RETIRO ANTES DE HORAS
+                                    If numMotivo = 25 OrElse numMotivo = 28 OrElse numMotivo = 29 OrElse numMotivo = 30 OrElse numMotivo = 38 OrElse numMotivo = 39 Then
+                                        If dataAjustes.Tables(0).Rows.Count > 0 Then
+                                            'LIQPARALELO PERO FILA 3
+                                            unRegistro.TotalHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(2), Decimal)
+                                            unRegistro.hcomunes = 9.5 - CType(dataAjustes.Tables(0).Rows(0).Item(2), Decimal)
+                                        Else
+                                            'ME FIJO EN LIQHORAS // ES AJUSTE VARIAS FECHAS AUTOMATICO
+                                            Dim dataAjustesLIQHORAS As DataSet = TraerAjustesHorasAutomatico(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+                                            If dataAjustesLIQHORAS.Tables(0).Rows.Count > 0 Then
+                                                Dim tothoras As Decimal = CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(6), Decimal) + CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(7), Decimal) + CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = tothoras
+                                                unRegistro.hcomunes = 9.5 - tothoras
+                                            Else
+                                                unRegistro.TotalHorasTrabajadas = 9.5
+                                                unRegistro.hcomunes = 9.5
+                                            End If
+                                        End If
+                                        'FIN RETIRO ANTES HORA
+
+                                    Else
+                                        'CASO NORMAL DE FALTA
+                                        Dim d As Integer
+                                        d = Weekday(unRegistro.fecha)
+                                        If seccion = 16 Then
+                                            'LIMPIEZA
+                                            If d = 7 Then
+                                                'LIBRE SABADO
+                                                unRegistro.hcomunes = 0
+                                            Else
+                                                unRegistro.hcomunes = 9.5
+                                                unRegistro.TotalHorasTrabajadas = 9.5
+                                            End If
+                                        Else
+                                            If d = 1 OrElse d = 7 Then
+                                                unRegistro.hcomunes = 0
+                                            Else
+                                                unRegistro.hcomunes = 9.5
+                                                unRegistro.TotalHorasTrabajadas = 9.5
+                                            End If
+                                        End If
+
+                                    End If
+
+                                    unRegistro.hnocturnas = 0
+                                    unRegistro.hextras = 0
+                                    unRegistro.hextranoc = 0
+                                End If
+                                'MOTIVO AMONESTACION
+                                Select Case numMotivo
+                                    Case 36, 35
+                                        unRegistro.hcomunes = 0
+                                        unRegistro.hnocturnas = 0
+                                        unRegistro.hextras = 0
+                                        unRegistro.hextranoc = 0
+
+                                    Case 31, 38, 39
+                                        '31 Legadas Tardes
+                                        '38 Legadas Llegada Tarde por tramite
+                                        '39 Llegada Tarde por ex. medico
+                                        'Traer Ajustes de Liq PARALELO
+
+                                        Dim dataAjustes As DataSet = TraerAjustesHoras(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+
+                                        If dataAjustes.Tables(0).Rows.Count > 0 Then
+                                            Dim totHorasTrabajadas As Decimal
+                                            Try
+                                                totHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                                unRegistro.hcomunes = 9.5 - totHorasTrabajadas
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                unRegistro.TotalHorasExtrasTrabajadas = 0
+                                                unRegistro.TotalHorasTrabajadas = totHorasTrabajadas
+                                            Catch ex As Exception
+                                                totHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(2), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(3), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(4), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(5), Decimal)
+                                                unRegistro.hcomunes = 9.5 - totHorasTrabajadas
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                unRegistro.TotalHorasExtrasTrabajadas = 0
+                                                unRegistro.TotalHorasTrabajadas = totHorasTrabajadas
+                                            End Try
+                                        Else
+                                            Dim dataAjustesAuto As DataSet = TraerAjustesHorasAutomatico(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+                                            Dim totHorasTrabajadas As Decimal
+                                            Try
+                                                totHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                                If totHorasTrabajadas = 0 Then
+                                                    totHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(6), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(7), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(9), Decimal)
+                                                    unRegistro.hcomunes = 9.5 - totHorasTrabajadas
+                                                    unRegistro.hextras = 0
+                                                    unRegistro.hnocturnas = 0
+                                                    unRegistro.hextranoc = 0
+                                                    unRegistro.TotalHorasExtrasTrabajadas = 0
+                                                    unRegistro.TotalHorasTrabajadas = totHorasTrabajadas
+                                                Else
+                                                    unRegistro.hcomunes = 9.5 - totHorasTrabajadas
+                                                    unRegistro.hextras = 0
+                                                    unRegistro.hnocturnas = 0
+                                                    unRegistro.hextranoc = 0
+                                                    unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                                    unRegistro.TotalHorasTrabajadas = totHorasTrabajadas
+                                                End If
+
+                                            Catch ex As Exception
+                                                totHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(6), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(7), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.hcomunes = 9.5 - totHorasTrabajadas
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                unRegistro.TotalHorasExtrasTrabajadas = 0
+                                                unRegistro.TotalHorasTrabajadas = totHorasTrabajadas
+                                            End Try
+
+
+
+                                        End If
+
+                                End Select
+
+                            Else
+                                'SECCIONES ### HORARIO CENTRAL ###
+                                Dim DiaActual As String = "#" & unRegistro.fecha.Month & "/" & unRegistro.fecha.Day & "/" & unRegistro.fecha.Year & "#"
+
+                                'Fila de Horario Central
+                                Dim LineaHorarioCentral As Data.DataRow
+                                LineaHorarioCentral = BuscarHorasHorarioCentral(unRegistro.fecha, seccion, DataHorariosCentrales)
+
+                                Select Case numMotivo
+
+                                    Case 25, 28, 29, 30, 38, 39
+                                        'RETIROS ANTES HORAS ### SECCIONES CON HORARIO CENTRAL ###
+                                        'Traer Ajustes de Liq PARALELO
+                                        Dim dataAjustes As DataSet = TraerAjustesHoras(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+
+                                        If dataAjustes.Tables(0).Rows.Count > 0 Then
+                                            If Not LineaHorarioCentral Is Nothing Then
+                                                unRegistro.hcomunes = LineaHorarioCentral.Item(4) - CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal)
+                                                unRegistro.hextras = LineaHorarioCentral.Item(5) - CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.hnocturnas = LineaHorarioCentral.Item(6) - CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal)
+                                                unRegistro.hextranoc = LineaHorarioCentral.Item(7) - CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                                unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                            Else
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                                unRegistro.hcomunes = 9.5 - unRegistro.TotalHorasTrabajadas
+                                            End If
+                                        Else
+                                            Dim dataAjustesAuto As DataSet = TraerAjustesHorasAutomatico(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+                                            If Not LineaHorarioCentral Is Nothing Then
+                                                unRegistro.hcomunes = LineaHorarioCentral.Item(4) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal)
+                                                unRegistro.hextras = LineaHorarioCentral.Item(5) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                                unRegistro.hnocturnas = LineaHorarioCentral.Item(6) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal)
+                                                unRegistro.hextranoc = LineaHorarioCentral.Item(7) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                                unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                            Else
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                                unRegistro.hcomunes = 9.5 - unRegistro.TotalHorasTrabajadas
+                                            End If
+                                        End If
+
+                                    Case 31, 38, 39
+                                        '31 Legadas Tardes
+                                        '38 Legadas Llegada Tarde por tramite
+                                        '39 Llegada Tarde por ex. medico
+                                        'Traer Ajustes de Liq PARALELO
+
+
+                                        Dim dataAjustes As DataSet = TraerAjustesHoras(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+
+                                        If dataAjustes.Tables(0).Rows.Count > 0 Then
+                                            Try
+                                                unRegistro.hcomunes = LineaHorarioCentral.Item(4) - CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal)
+                                                unRegistro.hextras = LineaHorarioCentral.Item(5) - CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.hnocturnas = LineaHorarioCentral.Item(6) - CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal)
+                                                unRegistro.hextranoc = LineaHorarioCentral.Item(7) - CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                                unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                                                unRegistro.TotalHorasTrabajadas = CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal) + CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                                            Catch ex As Exception
+                                                unRegistro.TotalHorasExtrasTrabajadas = 0
+                                                unRegistro.TotalHorasTrabajadas = 0
+
+                                            End Try
+                                           
+                                        Else
+                                            Dim dataAjustesAuto As DataSet = TraerAjustesHorasAutomatico(unRegistro.fecha, unRegistro.fecha, unRegistro.numeroOp)
+                                            unRegistro.hcomunes = LineaHorarioCentral.Item(4) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal)
+                                            unRegistro.hextras = LineaHorarioCentral.Item(5) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                            unRegistro.hnocturnas = LineaHorarioCentral.Item(6) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal)
+                                            unRegistro.hextranoc = LineaHorarioCentral.Item(7) - CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                            unRegistro.TotalHorasExtrasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                                            unRegistro.TotalHorasTrabajadas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal) + CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                                        End If
+
+                                    Case 36, 35
+                                        '36 Amonestacion x no cumplir normas seguridad
+                                        '35 Amonestacion
+                                        unRegistro.hcomunes = 0
+                                        unRegistro.hnocturnas = 0
+                                        unRegistro.hextras = 0
+                                        unRegistro.hextranoc = 0
+                                    Case Else
+                                        If LineaHorarioCentral IsNot Nothing Then
+                                            'Horas Comunes 
+                                            Dim extra As Decimal = LineaHorarioCentral.Item(5)
+                                            If extra >= 4 Then
+                                                unRegistro.hcomunes = 0
+                                                unRegistro.hextras = 0
+                                                unRegistro.hnocturnas = 0
+                                                unRegistro.hextranoc = 0
+                                                If seccion = 17 And LineaHorarioCentral.Item(6) >= 1 Then
+                                                    unRegistro.hcomunes = LineaHorarioCentral.Item(4)
+                                                    unRegistro.hextras = LineaHorarioCentral.Item(5)
+                                                    unRegistro.hnocturnas = LineaHorarioCentral.Item(6)
+                                                    unRegistro.hextranoc = LineaHorarioCentral.Item(7)
+                                                End If
+                                            Else
+                                                unRegistro.hcomunes = LineaHorarioCentral.Item(4)
+                                                unRegistro.hextras = LineaHorarioCentral.Item(5)
+                                                unRegistro.hnocturnas = LineaHorarioCentral.Item(6)
+                                                unRegistro.hextranoc = LineaHorarioCentral.Item(7)
+                                            End If
+
+
+                                        Else
+                                            unRegistro.hcomunes = 0
+                                            unRegistro.hnocturnas = 0
+                                            unRegistro.hextras = 0
+                                            unRegistro.hextranoc = 0
+                                        End If
+
+                                End Select
+                            End If
+                            Dim unRegistroNuevo As New AusentismoHoras
+                            unRegistroNuevo.fecha = unRegistro.fecha
+                            unRegistroNuevo.desde = unRegistro.desde
+                            unRegistroNuevo.hasta = unRegistro.hasta
+                            unRegistroNuevo.hcomunes = unRegistro.hcomunes
+                            unRegistroNuevo.hextranoc = unRegistro.hextranoc
+                            unRegistroNuevo.hextras = unRegistro.hextras
+                            unRegistroNuevo.hnocturnas = unRegistro.hnocturnas
+                            unRegistroNuevo.motivo = unRegistro.motivo
+                            unRegistroNuevo.nombre = unRegistro.nombre
+                            unRegistroNuevo.numeroMotivo = unRegistro.numeroMotivo
+                            unRegistroNuevo.numeroOp = unRegistro.numeroOp
+                            unRegistroNuevo.seccion = unRegistro.seccion
+                            unRegistroNuevo.MesAusentismo = unRegistro.MesAusentismo
+                            unRegistroNuevo.TotalHorasExtrasTrabajadas = unRegistro.TotalHorasExtrasTrabajadas
+                            unRegistroNuevo.TotalHorasTrabajadas = unRegistro.TotalHorasTrabajadas
+
+                            colRetorno.Add(unRegistroNuevo)
+                            Try
+                                unRegistro.Guardar()
+                            Catch ex As Exception
+
+                            End Try
+
+                            conta += 1
+                            If conta > CantDias Then
+                                Exit Do
+                            End If
+                        Loop
+
+
+                        i += 1
+                        If i < DsInasistencias.Tables(0).Rows.Count Then
+                            If CType(DsInasistencias.Tables(0).Rows(i).Item("EmpleadoId"), Integer) <> EmpleadoIdAnt Then
+                                TerminaEmpleado = True
+                            End If
+                        End If
+
+                    Loop
+                Else
+
+                End If
+            Loop
+
+
+        End If
+        ResumenAusentismo(ini, colRetorno, pTodosLasHorasTrabajadas)
+        Return colRetorno
+    End Function
+
+
+    'Public Function TodosLosAusentismos() As DataTable
+    '    ' StrConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Prueba Martin\BaseEtiquetas.mdb;Persist Security Info=False"
+    '    StrComando = "SELECT * FROM AuxAusentismo order by operario"
+    '    adapter = New OleDbDataAdapter(StrComando, Fachada.ConectarAuxChronos)
+    '    Cb = New OleDbCommandBuilder(adapter)
+    '    adapter.Fill(copia, "AuxAusentismo")
+    '    Return copia.Tables("AuxAusentismo")
+    'End Function
+
+    Public Function TodosLosAusentismos() As DataSet
+        Dim cadenaConsulta As String = "SELECT * FROM AuxAusentismo order by operario"
+        Dim DsMovimientos As DataSet
+        DsMovimientos = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return DsMovimientos
+    End Function
+
+    Public Function ResumenAusentismo(ByVal pmes As Date) As DataSet
+        Dim cadenaConsulta As String = "SELECT * FROM ResumenAusentismo where MesAusentismo = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "#  order by operario"
+        Dim DsMovimientos As DataSet
+        DsMovimientos = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return DsMovimientos
+    End Function
+
+    Public Function ResumenAusentismoxSector(ByVal pmes As Date) As DataSet
+        'Dim cadenaConsulta As String = "SELECT ResumenAusentismo.seccion, Sum(ResumenAusentismo.BSE) AS SumaDeBSE FROM(ResumenAusentismo) WHERE(((ResumenAusentismo.MesAusentismo) = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "# ))GROUP BY ResumenAusentismo.seccion"
+        Dim cadenaConsulta As String = ""
+        cadenaConsulta &= "SELECT ResumenAusentismo.seccion, Sum(ResumenAusentismo.BSE) AS BSE, Sum(ResumenAusentismo.LLTAR) AS LLTAR, Sum(ResumenAusentismo.SINJUS) AS SINJUS, Sum(ResumenAusentismo.ENF) AS ENF, Sum(ResumenAusentismo.FAMENF) AS FAMENF, Sum(ResumenAusentismo.MAT) AS MAT, Sum(ResumenAusentismo.SANFAL) AS SANFAL, Sum(ResumenAusentismo.SANIND) AS SANIND, Sum(ResumenAusentismo.SANLLTAR) AS SANLLTAR, Sum(ResumenAusentismo.SANTMR) AS SANTMR, Sum(ResumenAusentismo.SANSH) AS SANSH, Sum(ResumenAusentismo.PERM1J) AS PERM1J, Sum(ResumenAusentismo.PMEN1J) AS PMEN1J, Sum(ResumenAusentismo.DUELO) AS DUELO, Sum(ResumenAusentismo.LICES) AS LICES, Sum(ResumenAusentismo.TERMTRAB) AS TERMTRAB, Sum(ResumenAusentismo.DONSAN) AS DONSAN, Sum(ResumenAusentismo.DISSE) AS DISSE, Sum(ResumenAusentismo.LICEST) AS LICEST, Sum(ResumenAusentismo.MAM) AS MAM, Sum(ResumenAusentismo.SUS) AS SUS, Sum(ResumenAusentismo.TotalHorasAusen) AS TotalHorasAusen, Sum(ResumenAusentismo.HorasExtrasTrab) AS HorasExtrasTrab, Sum(ResumenAusentismo.HorasTotalesTrab) AS HorasTotalesTrab"
+        cadenaConsulta &= " FROM(ResumenAusentismo)"
+        cadenaConsulta &= " WHERE(((ResumenAusentismo.MesAusentismo) = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "# ))"
+        cadenaConsulta &= " GROUP BY ResumenAusentismo.seccion"
+        ' cadenaConsulta &= "HAVING(((ResumenAusentismo.seccion) <> ""))"
+
+
+        Dim DsMovimientos As DataSet
+        DsMovimientos = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return DsMovimientos
+    End Function
+
+    Public Function TodosLosAusentismosxMes(ByVal pmes As Date) As DataSet
+        Dim cadenaConsulta As String = "SELECT * FROM AuxAusentismo where mesAusentismo = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "#  order by operario"
+        Dim DsMovimientos As DataSet
+        DsMovimientos = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return DsMovimientos
+    End Function
+
+
+    Public Function TodosLasHorasTrabajadas(ByVal pmes As Date) As DataSet
+        Dim cadenaConsulta As String = "select * from HorasTrabajadas where MesDeLiq = #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "#  order by Id_Persona"
+        Dim dsData As DataSet
+        dsData = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return dsData
+    End Function
+
+    Public Function BuscarOperarioHorasTrabajadas(ByVal pId As Integer, ByVal dataHorasTrabajadas As DataSet) As DataRow
+        For Each rw As DataRow In dataHorasTrabajadas.Tables(0).Rows
+            If pId = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+
+    Public Function TodosLosTiposMotivos() As DataSet
+        Dim cadenaConsulta As String = "select * from MOTIVOINASISTENCIA order by MotivoInasistenciaId"
+        Dim DsMovimientos As DataSet
+        DsMovimientos = EjecutarSQL(cadenaConsulta, Fachada.ConectarAuxChronos)
+        Return DsMovimientos
+    End Function
+
+    Public Function TodosLosOperariosACTIVOS() As DataSet
+        Dim cadenaConsulta As String = "select * from EMPLEADO WHERE SeccionId <> 50 and EmpleadoInactivo=0 order by EmpleadoID"
+        Dim DsOperarios As DataSet
+        DsOperarios = EjecutarSQL(cadenaConsulta, Fachada.ConectarReloj)
+        Return DsOperarios
+    End Function
+
+    Public Function BuscarNombreOperario(ByVal pId As Integer, ByVal dataOperarios As DataSet) As DataRow
+        For Each rw As DataRow In dataOperarios.Tables(0).Rows
+            If pId = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+    Public Function TodosLasHorasNoProductivas(ByVal pmes As Date, ByVal pQuincena As String) As DataSet
+        Dim cadenaConsulta As String = "select * from HORASNOPROD WHERE mesdeliq >= #" & pmes.Month & "/" & pmes.Day & "/" & pmes.Year & "# and quincena =" & """" & pQuincena & """" & " order by idcontrato"
+        Dim DsOperarios As DataSet
+        DsOperarios = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return DsOperarios
+    End Function
+
+
+    Public Function BuscarTiposMotivos(ByVal pId As Integer, ByVal dataTiposMovimientos As DataSet) As DataRow
+        For Each rw As DataRow In dataTiposMovimientos.Tables(0).Rows
+            If pId = rw(0) Then
+                Return rw
+            End If
+        Next rw
+    End Function
+
+
+
+
+
+
+    Public Function TraerAuxContratos(ByVal pOperario As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from Contrato WHERE Id_Persona =" & pOperario & " order by Id_Persona"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAuxContratos As DataSet
+        DsAuxContratos = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return DsAuxContratos
+    End Function
+
+    Public Function TraerAuxContratosDestino(ByVal pid_Cargo As Integer, ByVal pid_Sector As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from Contrato WHERE id_Cargo =" & pid_Cargo & " and id_Sector =" & pid_Sector & " and vigente = true " & "order by Id_Persona"
+        'Dim cadenaConsulta As String = "select * from MARCA WHERE MarcaFechaJornada >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and  MarcaFechaJornada <=#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "#  and EmpleadoID =" & "'" & idOperario & "'" & "and MarcaIDE =" & "'" & pMarcaIDE & "'" & "order by EmpleadoID"
+        Dim DsAuxContratos As DataSet
+        DsAuxContratos = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return DsAuxContratos
+    End Function
+
+    Public Function TraerAuxCargos(ByVal pIdCargo As Integer, ByVal pIdSector As Integer) As DataSet
+        Dim cadenaConsulta As String = "select * from AuxCargo WHERE id_cargo =" & pIdCargo & " and  id_sector=" & pIdSector & " order by id_cargo"
+        Dim DsAuxContratos As DataSet
+        DsAuxContratos = EjecutarSQL(cadenaConsulta, Fachada.ConectarPersonal)
+        Return DsAuxContratos
+    End Function
+
+
+    Public Sub CalculoTransferencia(ByVal pListaTransferencias As List(Of ImportarTransferencia), ByVal pFechaRef As Date)
+        Dim cadenaerrores As String = ""
+        cadenaerrores &= ("REGISTRO ERRORES: " & Now)
+        cadenaerrores &= vbCrLf
+        cadenaerrores &= ("---------------------------------------")
+        cadenaerrores &= vbCrLf
+        Dim pfecha As Date
+        Dim contador As Integer = 0
+        Dim SumaHorasTotales As Decimal = 0
+        Dim seccion As Integer
+        Dim DataEmpleados As DataSet = TodasLosEmpleados()
+        Dim DataSecciones As DataSet = TodasLasSecciones()
+        Dim DataCabezas As DataSet = TodasLasCabezas()
+        Dim DataCargoValor As DataSet = TodosCargoValor()
+        Dim DataAuxJornales As DataSet = TodosAuxJornales()
+
+        Dim i As Integer = 0
+        Dim EmpleadoIdAnt As Integer
+        Do While i < pListaTransferencias.Count
+            Dim TerminaEmpleado As Boolean = False
+            Dim EsMenorASeisMeses As Boolean = False
+            Dim Operario As Data.DataRow = BuscarNombreEmpleado(pListaTransferencias.Item(i).numeroOperario, DataEmpleados)
+            Dim fechaIngreso As Date = Operario(15)
+            Dim meses As Integer = DateDiff(DateInterval.Month, fechaIngreso, pFechaRef)
+            If meses < 6 Then
+                EsMenorASeisMeses = True
+            End If
+
+            EmpleadoIdAnt = pListaTransferencias.Item(i).numeroOperario
+
+            'TRAER CONTRATOS ORIGEN
+            Dim DataContratos As DataSet = TraerAuxContratos(pListaTransferencias.Item(i).numeroOperario)
+            Dim Idcargo As Integer = CType(DataContratos.Tables(0).Rows(0).Item("id_Cargo"), Integer)
+            Dim Idsector As Integer = CType(DataContratos.Tables(0).Rows(0).Item("id_Sector"), Integer)
+            Dim OperarioSegunCrhonos As Data.DataRow = BuscarNombreEmpleado(EmpleadoIdAnt, DataEmpleados)
+            seccion = Operario(19)
+
+            Do While i < pListaTransferencias.Count And Not TerminaEmpleado
+
+                'TRAER CONTRATOS DESTINO
+                Dim DataContratosDestino As DataSet = TraerAuxContratosDestino(pListaTransferencias.Item(i).destinoTransferencia, Idsector)
+                Dim IdcargoDestino As Integer = 0
+                Dim IdsectorDestino As Integer = 0
+                Dim SueldoOriginalDestino As Decimal = 0
+                Dim HorasOriginalDestino As Decimal = 0
+                Dim DiasOriginalDestino As Integer = 0
+                Dim ValorHoraOriginalDestino As Decimal = 0
+                If DataContratosDestino.Tables(0).Rows.Count > 0 Then
+                    IdcargoDestino = CType(DataContratosDestino.Tables(0).Rows(0).Item("id_Cargo"), Integer)
+                    IdsectorDestino = CType(DataContratosDestino.Tables(0).Rows(0).Item("id_Sector"), Integer)
+                    SueldoOriginalDestino = CType(DataContratosDestino.Tables(0).Rows(0).Item("SUELDO"), Decimal)
+                    HorasOriginalDestino = CType(DataContratosDestino.Tables(0).Rows(0).Item("HORAS"), Decimal)
+                    DiasOriginalDestino = CType(DataContratosDestino.Tables(0).Rows(0).Item("CantDiasXMes"), Integer)
+                    ValorHoraOriginalDestino = Math.Round(SueldoOriginalDestino / DiasOriginalDestino / HorasOriginalDestino, 2)
+                Else
+                    cadenaerrores &= "No existe contrato de referencia Operario: " & EmpleadoIdAnt & " Destino Cargo: " & pListaTransferencias.Item(i).destinoTransferencia & " Sector: " & Idsector
+                    cadenaerrores &= vbCrLf
+                    Dim AuxJornal As Data.DataRow
+                    Try
+                        AuxJornal = BuscarAuxJornal(pListaTransferencias.Item(i).numeroOperario, DataAuxJornales)
+                        IdcargoDestino = pListaTransferencias.Item(i).destinoTransferencia
+                        IdsectorDestino = IdsectorDestino
+
+                        ValorHoraOriginalDestino = AuxJornal(1)
+                        cadenaerrores &= "AVISO: OK OK OK OK OK OK OK OK OK OK OK OK (Esta en Tabla AuxJornal)"
+                        cadenaerrores &= vbCrLf
+                    Catch ex As Exception
+                        cadenaerrores &= "No Valor Jornal en Tabla AuxJornal: " & EmpleadoIdAnt & " Destino Cargo: " & pListaTransferencias.Item(i).destinoTransferencia & " Sector: " & Idsector
+                        cadenaerrores &= vbCrLf
+                    End Try
+                End If
+
+                Dim SueldoOriginal As Decimal = CType(DataContratos.Tables(0).Rows(0).Item("SUELDO"), Decimal)
+                Dim HorasOriginal As Decimal = CType(DataContratos.Tables(0).Rows(0).Item("HORAS"), Decimal)
+                Dim DiasOriginal As Integer = CType(DataContratos.Tables(0).Rows(0).Item("CantDiasXMes"), Integer)
+                Dim ValorHoraOriginal As Decimal = Math.Round(SueldoOriginal / DiasOriginal / HorasOriginal, 2)
+                Dim DataCargos As DataSet = TraerAuxCargos(Idcargo, Idsector)
+                Dim DataCargosDestino As DataSet = TraerAuxCargos(pListaTransferencias.Item(i).destinoTransferencia, Idsector)
+
+                'INICIO DE HORAS
+                pfecha = pListaTransferencias.Item(i).fecha
+                Dim horasComunes As Decimal = 0
+                Dim horasExtras As Decimal = 0
+                Dim horasNocturnas As Decimal = 0
+                Dim horasExtraNocturnas As Decimal = 0
+                Dim TotalHorasPonderadas As Decimal = 0
+                Dim TotalHoras As Decimal = 0
+                Dim TotalHorasPonderadasCENTRAL As Decimal = 0
+
+                If seccion = 59 OrElse seccion = 29 OrElse seccion = 11 OrElse seccion = 26 OrElse seccion = 45 OrElse seccion = 71 OrElse seccion = 30 OrElse seccion = 39 OrElse seccion = 74 OrElse seccion = 33 OrElse seccion = 36 OrElse seccion = 102 OrElse seccion = 16 OrElse seccion = 23 OrElse seccion = 40 Then                    'SECCIONES SIN HORARIO CENTRAL
+                    If seccion = 40 Then
+                        'Secciones Varias
+                        Dim d As Integer
+                        If d = 1 OrElse d = 7 Then
+                            horasComunes = 0
+                        Else
+                            horasComunes = 9
+                        End If
+                        horasNocturnas = 0
+                        horasExtras = 0
+                        horasExtraNocturnas = 0
+                    Else
+                        Dim dataAjustes As DataSet = TraerAjustesHoras(pfecha, pfecha, pListaTransferencias.Item(i).numeroOperario)
+
+
+                        If dataAjustes.Tables(0).Rows.Count > 0 Then
+                            'LIQPARALELO PERO FILA 3
+                            horasComunes = CType(dataAjustes.Tables(0).Rows(0).Item(2), Decimal)
+                            horasNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(4), Decimal)
+                            horasExtras = CType(dataAjustes.Tables(0).Rows(0).Item(3), Decimal)
+                            horasExtraNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(5), Decimal)
+
+                        Else
+                            'ME FIJO EN LIQHORAS // ES AJUSTE VARIAS FECHAS AUTOMATICO
+                            Dim dataAjustesLIQHORAS As DataSet = TraerAjustesHorasAutomatico(pfecha, pfecha, pListaTransferencias.Item(i).numeroOperario)
+                            If dataAjustesLIQHORAS.Tables(0).Rows.Count > 0 Then
+                                horasComunes = CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(6), Decimal)
+                                horasNocturnas = CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(8), Decimal)
+                                horasExtras = (CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(7), Decimal))
+                                horasExtraNocturnas = (CType(dataAjustesLIQHORAS.Tables(0).Rows(0).Item(9), Decimal))
+                            Else
+                                horasComunes = 9.5
+                                horasNocturnas = 0
+                                horasExtras = 0
+                                horasExtraNocturnas = 0
+                            End If
+
+
+                            'If seccion = 16 Then
+                            '    horasComunes = 9.5
+                            'End If
+                        End If
+
+
+                    End If
+                    TotalHorasPonderadas = horasComunes + (horasExtras * 2) + (horasNocturnas * 1.2) + (horasExtraNocturnas * 2.4)
+                    TotalHoras = TotalHorasPonderadas
+                Else
+
+                    Dim DataHorariosCentrales As DataSet = TodosHorarioCentral(pfecha, pfecha)
+                    Dim LineaHorarioCentral As Data.DataRow
+                    LineaHorarioCentral = BuscarHorasHorarioCentral(pfecha, seccion, DataHorariosCentrales)
+
+                    Dim dataAjustes As DataSet = TraerAjustesHorasUnDia(pfecha, pListaTransferencias.Item(i).numeroOperario)
+                    If dataAjustes.Tables.Item(0).Rows.Count > 0 Then
+
+                        Try
+                            horasComunes = CType(dataAjustes.Tables(0).Rows(0).Item(8), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            'cadenaerrores &= "Falta Ajuste Comunes Operario: " & EmpleadoIdAnt & " Fecha: " & pfecha
+                            'cadenaerrores &= vbCrLf
+                            horasComunes = CType(dataAjustes.Tables(0).Rows(0).Item(2), Decimal)
+                        End Try
+
+                        Try
+                            horasExtras = CType(dataAjustes.Tables(0).Rows(0).Item(9), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            'cadenaerrores &= "Falta Ajuste Extra Operario: " & EmpleadoIdAnt & " Fecha: " & pfecha
+                            'cadenaerrores &= vbCrLf
+                            horasExtras = CType(dataAjustes.Tables(0).Rows(0).Item(3), Decimal)
+                        End Try
+
+                        Try
+                            horasNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(10), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            'cadenaerrores &= "Falta Ajuste Nocturnas Operario: " & EmpleadoIdAnt & " Fecha: " & pfecha
+                            'cadenaerrores &= vbCrLf
+                            horasNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(4), Decimal)
+                        End Try
+
+                        Try
+                            horasExtraNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(11), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            'cadenaerrores &= "Falta Ajuste Extra Nocturnas Operario: " & EmpleadoIdAnt & " Fecha: " & pfecha
+                            'cadenaerrores &= vbCrLf
+                            horasExtraNocturnas = CType(dataAjustes.Tables(0).Rows(0).Item(5), Decimal)
+                        End Try
+
+                        TotalHorasPonderadas = horasComunes + (horasExtras * 2) + (horasNocturnas * 1.2) + (horasExtraNocturnas * 2.4)
+                    Else
+                        Dim dataAjustesAuto As DataSet
+                        Try
+                            dataAjustesAuto = TraerAjustesHorasAutomatico(pfecha, pfecha, pListaTransferencias.Item(i).numeroOperario)
+                            horasComunes = CType(dataAjustesAuto.Tables(0).Rows(0).Item(19), Decimal)
+                            horasExtras = CType(dataAjustesAuto.Tables(0).Rows(0).Item(20), Decimal)
+                            horasNocturnas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(21), Decimal)
+                            horasExtraNocturnas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(22), Decimal)
+                        Catch ex As Exception
+
+                        End Try
+
+
+                        Try
+                            If dataAjustesAuto.Tables(0).Rows(0).Item(19) <= 0 Then
+                                horasComunes = CType(dataAjustesAuto.Tables(0).Rows(0).Item(6), Decimal)
+                                horasExtras = CType(dataAjustesAuto.Tables(0).Rows(0).Item(7), Decimal)
+                                horasNocturnas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(8), Decimal)
+                                horasExtraNocturnas = CType(dataAjustesAuto.Tables(0).Rows(0).Item(9), Decimal)
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+                        TotalHorasPonderadas = horasComunes + (horasExtras * 2) + (horasNocturnas * 1.2) + (horasExtraNocturnas * 2.4)
+                        TotalHoras = TotalHorasPonderadas
+                    End If
+
+                    Dim horasComunesCENTRAL As Decimal = 0
+                    Dim horasExtrasCENTRAL As Decimal = 0
+                    Dim horasNocturnasCENTRAL As Decimal = 0
+                    Dim horasExtraNocturnasCENTRAL As Decimal = 0
+
+                    If LineaHorarioCentral Is Nothing Then
+                        cadenaerrores &= "No existe Horario Central para: " & pfecha & " Seccion: " & seccion
+                        cadenaerrores &= vbCrLf
+                        horasComunesCENTRAL = 0
+                        horasExtrasCENTRAL = 0
+                        horasNocturnasCENTRAL = 0
+                        horasExtraNocturnasCENTRAL = 0
+                        TotalHorasPonderadasCENTRAL = 0
+                    Else
+                        horasComunesCENTRAL = LineaHorarioCentral.Item(4)
+                        horasExtrasCENTRAL = LineaHorarioCentral.Item(5)
+                        horasNocturnasCENTRAL = LineaHorarioCentral.Item(6)
+                        horasExtraNocturnasCENTRAL = LineaHorarioCentral.Item(7)
+                        TotalHorasPonderadasCENTRAL = horasComunesCENTRAL + (horasExtrasCENTRAL * 2) + (horasNocturnasCENTRAL * 1.2) + (horasExtraNocturnasCENTRAL * 2.4)
+
+                    End If
+
+                    If TotalHorasPonderadas > TotalHorasPonderadasCENTRAL Then
+                        TotalHoras = TotalHorasPonderadasCENTRAL
+                        contador += 1
+                    Else
+                        TotalHoras = TotalHorasPonderadas
+                        contador += 1
+                    End If
+                    SumaHorasTotales += TotalHoras
+
+                End If
+                'FIN HORAS
+
+
+                '43 EMBREATA
+                '21 EMP MENUD. MOND
+                '22 FAENA 1
+                '32 FAENA 2
+                '26 MENUDENCIAS
+                '27 MONDONGUERIA
+                If Idsector = 43 Or Idsector = 21 Or Idsector = 22 Or Idsector = 32 Or Idsector = 26 Or Idsector = 27 Then
+                    Dim misCabezas As Decimal = 0
+                    Dim fechaApasar As Date = pListaTransferencias.Item(i).fecha
+                    Dim LineaCabezas As Data.DataRow = BuscarCabezas(fechaApasar, DataCabezas)
+                    Dim Cabezas As Integer
+                    If Not LineaCabezas Is Nothing Then
+                        Cabezas = LineaCabezas(0)
+                    Else
+                        Cabezas = 0
+                    End If
+
+                    Dim LineaCargoOrigen As Data.DataRow = BuscarCargoValor(Idcargo, DataCargoValor)
+                    Dim ValorCargoOrigen As Decimal = LineaCargoOrigen(1)
+                    Dim LineaCargoDestino As Data.DataRow = BuscarCargoValor(IdcargoDestino, DataCargoValor)
+                    Dim ValorCargoDestino As Decimal = LineaCargoDestino(1)
+                    Dim diferencia As Decimal = ValorCargoDestino - ValorCargoOrigen
+
+                    If TotalHorasPonderadas < TotalHorasPonderadasCENTRAL Then
+                        misCabezas = Math.Round((TotalHorasPonderadas * Cabezas) / TotalHorasPonderadasCENTRAL, 2)
+                        cadenaerrores &= "AVISO: NO COMPLETO JORNADA OPERARIO: " & EmpleadoIdAnt & " FECHA: " & pfecha & " SE PAGO x CABEZAS: " & misCabezas
+                        cadenaerrores &= vbCrLf
+                    Else
+                        misCabezas = Cabezas
+                    End If
+
+                    Dim vmonto As Decimal = misCabezas * diferencia
+
+                    Dim unaTransferencias As New Transferencia
+                    unaTransferencias.numerooperario = pListaTransferencias.Item(i).numeroOperario
+                    unaTransferencias.nombreoperario = Operario(2) & " " & Operario(1)
+                    unaTransferencias.Sector = ""
+                    unaTransferencias.CargoOrigen = Idcargo
+                    unaTransferencias.sectorOrigen = Idsector
+                    unaTransferencias.CargoDestino = IdcargoDestino
+                    unaTransferencias.sectorDestino = IdsectorDestino
+                    unaTransferencias.fecha = pfecha
+                    unaTransferencias.difAPagar = diferencia
+                    unaTransferencias.horas = TotalHoras
+                    unaTransferencias.monto = 0
+                    unaTransferencias.ProductividadOriginal = 0
+                    unaTransferencias.ProductividadDestino = 0
+                    unaTransferencias.TotalProductividad = vmonto
+                    unaTransferencias.cabezas = misCabezas
+                    unaTransferencias.Guardar()
+                Else
+                    'TRANSFERENCIAS DESOSADO
+                    'CALCULAR PRODUCTIVIDAD FIJA 
+                    Dim Productividad As Decimal
+                    Dim PorcentajeValor As Decimal
+                    Dim PorcentajeValorDestino As Decimal
+
+
+                    Dim PorcentajeValorMenorSeisMeses As Decimal
+                    Dim PorcentajeValorMenorSeisMesesDESTINO As Decimal
+
+                    Dim ValorProductividadFija As Decimal = CType(DataContratos.Tables(0).Rows(0).Item("valor"), Decimal)
+
+                    If EsMenorASeisMeses = True Then
+                        'MENOR A SEIS MESES PRODUCTIVIDAD MINIMA
+                        '///////////////////////////////////////
+                        '////////////////////////////////////////
+                        Try
+                            PorcentajeValorMenorSeisMeses = CType(DataCargos.Tables(0).Rows(0).Item("valor6meses"), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            PorcentajeValorMenorSeisMeses = 0
+                            cadenaerrores &= "INGRESE PRODUC. MINIMA Tabla Auxcargo para CargoOrigen: " & Idcargo & " Sector: " & Idsector & " //OPERARIO: " & pListaTransferencias.Item(i).numeroOperario
+                            cadenaerrores &= vbCrLf
+                        End Try
+
+
+                    Else
+                        Try
+                            PorcentajeValor = CType(DataCargos.Tables(0).Rows(0).Item("valor"), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            PorcentajeValor = 0
+                            cadenaerrores &= "No Reg. Tabla Auxcargo para CargoOrigen: " & Idcargo & " Sector: " & Idsector & " //OPERARIO: " & pListaTransferencias.Item(i).numeroOperario
+                            cadenaerrores &= vbCrLf
+                        End Try
+                    End If
+
+                    If EsMenorASeisMeses = True Then
+                        'MENOR A SEIS MESES PRODUCTIVIDAD MINIMA
+                        '///////////////////////////////////////
+                        '////////////////////////////////////////
+                        Try
+                            PorcentajeValorMenorSeisMesesDESTINO = CType(DataCargosDestino.Tables(0).Rows(0).Item("valor6meses"), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            PorcentajeValorMenorSeisMesesDESTINO = 0
+                            cadenaerrores &= "INGRESE PRODUC. MINIMA Tabla Auxcargo para CargoDestino: " & IdcargoDestino & " Sector: " & IdsectorDestino & " //OPERARIO: " & pListaTransferencias.Item(i).numeroOperario
+                            cadenaerrores &= vbCrLf
+                        End Try
+
+
+                    Else
+                        Try
+                            PorcentajeValorDestino = CType(DataCargosDestino.Tables(0).Rows(0).Item("valor"), Decimal)
+                        Catch ex As Exception
+                            ' Sin ninguna implementación
+                            PorcentajeValorDestino = 0
+                            cadenaerrores &= "No Reg. Tabla Auxcargo para CargoDestino: " & IdcargoDestino & " Sector: " & IdsectorDestino & " //OPERARIO: " & pListaTransferencias.Item(i).numeroOperario
+                            cadenaerrores &= vbCrLf
+                        End Try
+                    End If
+
+
+                    Dim DiferenciaValorHoras As Decimal = ValorHoraOriginalDestino - ValorHoraOriginal
+                    If DiferenciaValorHoras < 0 Then
+                        cadenaerrores &= "Transferencia Negativa: Cargo Original: " & Idcargo & " Cargo Destino: " & IdcargoDestino & " Operario: " & pListaTransferencias.Item(i).numeroOperario
+                        cadenaerrores &= vbCrLf
+                    End If
+                    Dim Vmonto, VProdOrigen, VProdDestino As Decimal
+
+                    If EsMenorASeisMeses = False Then
+                        Vmonto = Math.Round(TotalHoras * DiferenciaValorHoras, 2)
+                        VProdOrigen = Math.Round(TotalHoras * ValorHoraOriginal * (0.01 * PorcentajeValor), 2)
+                        VProdDestino = Math.Round(TotalHoras * ValorHoraOriginalDestino * (0.01 * PorcentajeValorDestino), 2)
+                    Else
+                        Vmonto = Math.Round(TotalHoras * DiferenciaValorHoras, 2)
+                        Dim difProdMinima As Decimal = PorcentajeValorMenorSeisMesesDESTINO - PorcentajeValorMenorSeisMeses
+                        VProdOrigen = Math.Round(TotalHoras * difProdMinima, 2)
+                        VProdDestino = Math.Round(TotalHoras * difProdMinima, 2)
+                    End If
+
+                    Dim ProdFija As Decimal = 0
+                    If ValorProductividadFija > 0 Then
+                        ProdFija = TotalHoras * ValorProductividadFija
+                        If ProdFija > VProdOrigen Then
+                            Productividad = ProdFija
+                            cadenaerrores &= "--------------------------------------------------------------------"
+                            cadenaerrores &= vbCrLf
+                            cadenaerrores &= "AVISO: UTILIZO PROD. FIJA Operario : " & pListaTransferencias.Item(i).numeroOperario
+                            cadenaerrores &= vbCrLf
+                            cadenaerrores &= "--------------------------------------------------------------------"
+                            cadenaerrores &= vbCrLf
+                        Else
+                            Productividad = VProdOrigen
+                        End If
+                    Else
+                        Productividad = VProdOrigen
+                    End If
+
+                    Dim TotalProductividad As Decimal = 0
+                    If Productividad > VProdDestino Then
+                        Productividad = 0
+                        cadenaerrores &= "AVISO: PROD. MAYOR A DESTINO NO SE PAGA Operario : " & pListaTransferencias.Item(i).numeroOperario
+                        cadenaerrores &= vbCrLf
+                    Else
+                        If EsMenorASeisMeses = False Then
+                            TotalProductividad = VProdDestino - Productividad
+                        Else
+                            TotalProductividad = Productividad
+                        End If
+
+                    End If
+
+                    Dim unaTransferencias As New Transferencia
+                    unaTransferencias.numerooperario = pListaTransferencias.Item(i).numeroOperario
+                    unaTransferencias.nombreoperario = Operario(2) & " " & Operario(1)
+                    unaTransferencias.Sector = ""
+                    unaTransferencias.CargoOrigen = Idcargo
+                    unaTransferencias.sectorOrigen = Idsector
+                    unaTransferencias.CargoDestino = IdcargoDestino
+                    unaTransferencias.sectorDestino = IdsectorDestino
+                    unaTransferencias.fecha = pfecha
+                    unaTransferencias.difAPagar = DiferenciaValorHoras
+                    unaTransferencias.horas = TotalHoras
+                    unaTransferencias.monto = Vmonto
+                    If EsMenorASeisMeses = True Then
+                        unaTransferencias.ProductividadOriginal = PorcentajeValorMenorSeisMeses
+                        unaTransferencias.ProductividadDestino = PorcentajeValorMenorSeisMesesDESTINO
+                    Else
+                        unaTransferencias.ProductividadOriginal = PorcentajeValor
+                        unaTransferencias.ProductividadDestino = PorcentajeValorDestino
+                    End If
+                    unaTransferencias.TotalProductividad = TotalProductividad
+                    unaTransferencias.cabezas = 0
+                    unaTransferencias.Guardar()
+                End If
+                i += 1
+                If i < pListaTransferencias.Count - 1 Then
+                    If pListaTransferencias.Item(i).numeroOperario <> EmpleadoIdAnt Then
+                        TerminaEmpleado = True
+                    End If
+                End If
+
+            Loop
+
+        Loop
+        AgregarErroresTransferencia(cadenaerrores)
+        MsgBox("Finalizado")
+
+    End Sub
+
+
+    Public Function MostrarTransferencias() As DataTable
+        StrConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\\servidordb\Prueba Martin\BaseEtiquetas.mdb;Persist Security Info=False"
+        StrComando = "SELECT * FROM Transferencia order by Trans_numOp"
+        adapter = New OleDbDataAdapter(StrComando, StrConexion)
+        Cb = New OleDbCommandBuilder(adapter)
+        adapter.Fill(copia, "Transferencia")
+        Return copia.Tables("Transferencia")
+    End Function
+
+
+    Public Function MostrarTransferenciasDataSet() As DataSet
+        Dim cadenaConsulta As String = "select * from Transferencia order by Trans_numOp "
+        Dim DsTransferencias As DataSet
+        DsTransferencias = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Return DsTransferencias
+    End Function
+
+
+
+
+
+    Public Function ResumenAusentismo(ByVal pfecha As Date, ByVal plista As List(Of AusentismoHoras), ByVal pTodosLasHorasTrabajadas As DataSet) As Boolean
+        Dim mes As Date = pfecha
+        mes = DateSerial(Year(mes), Month(mes) + 0, 1)
+        Dim DsOperariosActivos As DataSet = Me.TodosLosOperariosACTIVOS
+        Dim DsHorasTrabajadas As DataSet = pTodosLasHorasTrabajadas
+        Dim DataSecciones As DataSet = TodasLasSecciones()
+        Dim i2 As Integer = 0
+        Do While i2 < DsOperariosActivos.Tables(0).Rows.Count
+            'HORAS TRABAJADAS
+            Dim numOp As Integer = DsOperariosActivos.Tables(0).Rows(i2).Item("EmpleadoID")
+            Dim OperarioHorasTrabajadas As DataRow = BuscarOperarioHorasTrabajadas(numOp, DsHorasTrabajadas)
+
+            Dim iddseccion As Integer = DsOperariosActivos.Tables(0).Rows(i2).Item("SeccionId")
+            Dim apellido As String
+            Dim nombre As String
+            Dim nombreCompleto As String
+            Dim unaseccion As String
+            Dim HorasTrabajadasComunes As Decimal
+
+            'VARIABLES HORAS
+            Dim TipoEmpleadoMenOJor As Integer = 0
+            Dim HorasTrabajadasNocturnas As Decimal = 0
+            Dim HorasTrabajadasExtras As Decimal = 0
+            Dim HorasTrabajadasExtrasNoc As Decimal = 0
+            'FIN
+
+            If Not OperarioHorasTrabajadas Is Nothing Then
+                'VERIFICO MENSUAL=0 O JORNALERO=1
+                TipoEmpleadoMenOJor = DsOperariosActivos.Tables(0).Rows(i2).Item("EmpleadoMJ")
+                HorasTrabajadasNocturnas = OperarioHorasTrabajadas(4)
+                HorasTrabajadasExtras = OperarioHorasTrabajadas(5)
+                HorasTrabajadasExtrasNoc = OperarioHorasTrabajadas(6)
+                If TipoEmpleadoMenOJor = 0 Then
+                    HorasTrabajadasComunes = 240 + HorasTrabajadasExtras + HorasTrabajadasExtrasNoc + HorasTrabajadasNocturnas
+                Else
+                    HorasTrabajadasComunes = OperarioHorasTrabajadas(3)
+                End If
+            Else
+                If TipoEmpleadoMenOJor = 0 Then
+                    HorasTrabajadasComunes = 240
+                    HorasTrabajadasNocturnas = 0
+                    HorasTrabajadasExtras = 0
+                    HorasTrabajadasExtrasNoc = 0
+                End If
+
+            End If
+
+
+            Dim TotalHExtras As Decimal = HorasTrabajadasExtras + HorasTrabajadasExtrasNoc
+            Dim TotalHoras As Decimal = HorasTrabajadasComunes + HorasTrabajadasNocturnas + HorasTrabajadasExtras + HorasTrabajadasExtrasNoc
+            If numOp = 9999 Then
+                iddseccion = 38
+            End If
+            If numOp <> 9999 And iddseccion <> 38 Then
+                apellido = DsOperariosActivos.Tables(0).Rows(i2).Item("EmpleadoApellidos")
+                nombre = DsOperariosActivos.Tables(0).Rows(i2).Item("EmpleadoNombre")
+                nombreCompleto = apellido & " " & nombre
+                unaseccion = BuscarNombreSeccion(iddseccion, DataSecciones)
+                Dim unpaustentismo As New pAusentismo
+                unpaustentismo.GuardarResumen(mes, nombreCompleto, numOp, unaseccion, TotalHExtras, TotalHoras)
+            End If
+            i2 += 1
+        Loop
+
+
+        Dim i As Integer = 0
+        Dim BSE As Decimal = 0
+        Dim LLTAR As Decimal = 0
+        Dim SINJUS As Decimal = 0
+        Dim ENF As Decimal = 0
+        Dim FAMENF As Decimal = 0
+        Dim MAT As Decimal = 0
+        Dim SANFAL As Decimal = 0
+        Dim SANIND As Decimal = 0
+        Dim SANLLTAR As Decimal = 0
+        Dim SANTMR As Decimal = 0
+        Dim SANSH As Decimal = 0
+        Dim PERM1J As Decimal = 0
+        Dim PMEN1J As Decimal = 0
+        Dim DUELO As Decimal = 0
+        Dim LICES As Decimal = 0
+        Dim TERMTRAB As Decimal = 0
+        Dim DONSAN As Decimal = 0
+        Dim DISSE As Decimal = 0
+        Dim LICEST As Decimal = 0
+        Dim SUS As Decimal = 0
+        Dim MAM As Decimal = 0
+        Dim EmpleadoIdAnt As Integer
+        If plista.Count > 0 Then
+            Do While i < plista.Count
+                Dim TerminaEmpleado As Boolean
+                TerminaEmpleado = False
+                'Seteo Horas a CERO
+                BSE = 0
+                LLTAR = 0
+                SINJUS = 0
+                ENF = 0
+                FAMENF = 0
+                MAT = 0
+                SANFAL = 0
+                SANIND = 0
+                SANLLTAR = 0
+                SANTMR = 0
+                SANSH = 0
+                PERM1J = 0
+                PMEN1J = 0
+                DUELO = 0
+                LICES = 0
+                TERMTRAB = 0
+                DONSAN = 0
+                DISSE = 0
+                LICEST = 0
+                SUS = 0
+                MAM = 0
+
+                EmpleadoIdAnt = plista.Item(i).numeroOp
+                Dim Nombre As String = plista.Item(i).nombre
+
+
+                Do While i < plista.Count And Not TerminaEmpleado
+                    '  AMONESTACION X NO CUMPLIR LAS NORMAS DE SEG E HIGIENE
+
+
+                    'If plista.Item(i).numeroMotivo = 35 Then
+                    '    Dim Totalhoras As Decimal = 0
+                    '    Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                    '    SANFAL += Totalhoras
+                    'End If
+
+                    If plista.Item(i).numeroMotivo = 40 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        SANSH += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 41 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        SANTMR += Totalhoras
+                    End If
+
+
+                    If plista.Item(i).numeroMotivo = 4 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        BSE += Totalhoras
+                    End If
+
+
+                    If plista.Item(i).numeroMotivo = 22 OrElse plista.Item(i).numeroMotivo = 27 OrElse plista.Item(i).numeroMotivo = 20 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        SINJUS += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 3 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        DONSAN += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 1 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        ENF += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 14 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        DUELO += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 12 OrElse plista.Item(i).numeroMotivo = 19 OrElse plista.Item(i).numeroMotivo = 18 OrElse plista.Item(i).numeroMotivo = 16 OrElse plista.Item(i).numeroMotivo = 17 OrElse plista.Item(i).numeroMotivo = 9 OrElse plista.Item(i).numeroMotivo = 38 OrElse plista.Item(i).numeroMotivo = 39 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'PERMISO UNA JORNADA
+                        PERM1J += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 11 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        DISSE += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 7 OrElse plista.Item(i).numeroMotivo = 23 OrElse plista.Item(i).numeroMotivo = 8 OrElse plista.Item(i).numeroMotivo = 5 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'LICENCIA ESPECIAL
+                        LICES += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 33 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'LICENCIA X ESTUDIO
+                        LICEST += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 10 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'MAMOGRAFIA
+                        MAM += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 32 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'MATERNIDAD
+                        MAT += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 25 OrElse plista.Item(i).numeroMotivo = 29 OrElse plista.Item(i).numeroMotivo = 28 OrElse plista.Item(i).numeroMotivo = 30 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + plista.Item(i).hnocturnas + plista.Item(i).hextras + plista.Item(i).hextranoc
+                        'RETIRO ANTES HORA
+                        PMEN1J += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 37 OrElse plista.Item(i).numeroMotivo = 21 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + (plista.Item(i).hnocturnas) + (plista.Item(i).hextras) + (plista.Item(i).hextranoc)
+                        'TERMINACION DE TRABAJO
+                        TERMTRAB += Totalhoras
+                    End If
+
+
+                    'SUSPENCIONES 
+                    If plista.Item(i).numeroMotivo = 15 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + (plista.Item(i).hnocturnas) + (plista.Item(i).hextras) + (plista.Item(i).hextranoc)
+                        'SANCION X LLEGADAS TARDES 
+                        SANLLTAR += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 2 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + (plista.Item(i).hnocturnas) + (plista.Item(i).hextras) + (plista.Item(i).hextranoc)
+                        'SANCION X INDISCIPLINA
+                        SANIND += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 13 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + (plista.Item(i).hnocturnas) + (plista.Item(i).hextras) + (plista.Item(i).hextranoc)
+                        'SANCION X FALTAS
+                        SANFAL += Totalhoras
+                    End If
+
+                    If plista.Item(i).numeroMotivo = 31 Then
+                        Dim Totalhoras As Decimal = 0
+                        Totalhoras = plista.Item(i).hcomunes + (plista.Item(i).hnocturnas) + (plista.Item(i).hextras) + (plista.Item(i).hextranoc)
+                        'LLEGADAS TARDESS
+                        LLTAR += Totalhoras
+                    End If
+
+
+
+                    i += 1
+                    If i < plista.Count Then
+                        If plista.Item(i).numeroOp <> EmpleadoIdAnt Then
+                            TerminaEmpleado = True
+                            Dim unarraylist(20) As Decimal
+                            ' unarraylist.SetValue(EmpleadoIdAnt, 0)
+                            ' unarraylist.SetValue(Nombre, 1)
+                            unarraylist.SetValue(BSE, 0)
+                            unarraylist.SetValue(LLTAR, 1)
+                            unarraylist.SetValue(SINJUS, 2)
+                            unarraylist.SetValue(ENF, 3)
+                            unarraylist.SetValue(FAMENF, 4)
+                            unarraylist.SetValue(MAT, 5)
+                            unarraylist.SetValue(SANFAL, 6)
+                            unarraylist.SetValue(SANIND, 7)
+                            unarraylist.SetValue(SANLLTAR, 8)
+                            unarraylist.SetValue(SANTMR, 9)
+                            unarraylist.SetValue(SANSH, 10)
+                            unarraylist.SetValue(PERM1J, 11)
+                            unarraylist.SetValue(PMEN1J, 12)
+                            unarraylist.SetValue(DUELO, 13)
+                            unarraylist.SetValue(LICES, 14)
+                            unarraylist.SetValue(TERMTRAB, 15)
+                            unarraylist.SetValue(DONSAN, 16)
+                            unarraylist.SetValue(DISSE, 17)
+                            unarraylist.SetValue(LICEST, 18)
+                            unarraylist.SetValue(MAM, 19)
+                            unarraylist.SetValue(SUS, 20)
+                            Dim TotalHorasAusentismo As Decimal = 0
+                            TotalHorasAusentismo = BSE + LLTAR + SINJUS + ENF + FAMENF + MAT + SANFAL + SANIND + SANLLTAR + SANTMR + SANSH + PERM1J + PMEN1J + DUELO + LICES + TERMTRAB + DONSAN + DISSE + LICEST + MAM + SUS
+                            If TotalHorasAusentismo > 0 Then
+                                Dim unpaustentismo As New pAusentismo
+                                unpaustentismo.ModificarResumen(mes, EmpleadoIdAnt, Nombre, unarraylist, TotalHorasAusentismo)
+                            End If
+
+                        End If
+
+                    End If
+
+                Loop
+
+            Loop
+        Else
+            Return False
+        End If
+
+
+    End Function
+
+
+
+    Public Sub Serializarxml(ByVal lista As List(Of BoletoCompraVenta))
+        'Genero el objeto serializador e indico que voy a serializar
+        Dim mySerializer As XmlSerializer
+        mySerializer = New XmlSerializer(lista.GetType)
+        'Gerero el stream para esribir los datos
+        Dim myWriter As IO.StreamWriter
+        myWriter = New StreamWriter("Etiqueta.xml", False)
+        'Serializo los datos y los guardo en el archivo
+        mySerializer.Serialize(myWriter, lista)
+        'lista.Clear()
+        myWriter.Close()
+    End Sub
+
+
+
+    Public Function Desserializarxml(ByVal lista As List(Of BoletoCompraVenta)) As List(Of BoletoCompraVenta)
+        Dim mySerializer As XmlSerializer
+        'Abro el archivo donde se encuentran los datos
+        Dim myFileStream As FileStream
+        myFileStream = New FileStream("Etiqueta.xml", FileMode.Open)
+        'Deserializo los datos del archivo y los guardo en la lista
+        lista = CType(mySerializer.Deserialize(myFileStream), List(Of BoletoCompraVenta))
+        Return lista
+    End Function
+
+
+
+
+    Public Function leerWebService(ByVal pultimodot As Integer) As DataTable
+        Dim MatrizProducto As Object
+        Dim svc As Salidas.Salidas = New Salidas.Salidas()
+        Dim ultimapesada As Integer = pultimodot
+        Dim fin As Boolean
+
+        If ultimapesada > 0 Then
+            Dim ProductosIngresados As Salidas.DesosadoResult = svc.Desosado("17/01/2011")
+            MatrizProducto = ProductosIngresados.Productos
+            Dim unproducto As Dominio.Salidas.Producto
+
+            ' Dim datasetprueba As New DataTable
+
+            For Each unproducto In MatrizProducto
+                Dim unalinea As DataRow = Me.ToDatarow(unproducto)
+                Guardar(unalinea)
+            Next
+
+            '   datasetprueba.WriteXml("obj.xml")
+        End If
+
+        While fin = False
+            Dim unProductoIngresados As Salidas.DesosadoResultDotNo = svc.DesosadoDotNo(ultimapesada)
+            If unProductoIngresados.Productos.Length > 0 Then
+                unProductoIngresados = svc.DesosadoDotNo(ultimapesada)
+                Dim elproducto As Dominio.Salidas.Producto = unProductoIngresados.Productos(0)
+                Dim unalinea As DataRow = Me.ToDatarow(elproducto)
+                Guardar(unalinea)
+                ultimapesada = ultimapesada + 1
+            Else
+                fin = True
+                TodasLosIngresosDesosado.WriteXml("obj.xml")
+                Return TodasLosIngresosDesosado()
+
+            End If
+        End While
+        '--------------------------------------------------------------------------------------------------
+        '--------------------------------------------------------------------------------------------------
+
+    End Function
+
+
+
+
+    
+
+
+    Public Sub ExportarExcel(ByVal DataGridView1 As Windows.Forms.DataGridView)
+
+        Dim xlApp As Microsoft.Office.Interop.Excel.Application
+        Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+        Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+        Dim misValue As Object = System.Reflection.Missing.Value
+        Dim i As Integer
+        Dim j As Integer
+
+
+
+        xlApp = New Microsoft.Office.Interop.Excel.ApplicationClass
+        xlWorkBook = xlApp.Workbooks.Add(misValue)
+        xlWorkSheet = xlWorkBook.Sheets("sheet1")
+
+
+        For i = 0 To DataGridView1.RowCount - 2
+            For j = 0 To DataGridView1.ColumnCount - 1
+                xlWorkSheet.Cells(i + 1, j + 1) = DataGridView1(j, i).Value.ToString()
+            Next
+        Next
+
+        xlWorkSheet.SaveAs("C:\vbexcel.xlsx")
+        xlWorkBook.Close()
+        xlApp.Quit()
+        releaseObject(xlApp)
+        releaseObject(xlWorkBook)
+        releaseObject(xlWorkSheet)
+        MsgBox("C:\vbexcel.xlsx")
+
+    End Sub
+
+
+    Public Sub Copiar_hoja_Excel(ByVal pNombreHoja As String, _
+        ByVal NameNuevaHoja As String, _
+         ByVal ObjExcelCopia As Object, _
+    ByVal PathLibro As String)
+
+
+        On Error GoTo Error_Sub
+
+        ' crea el objeto Excel  
+        'Dim ObjExcelCopia As Object
+        'ObjExcelCopia = CreateObject("Excel.Application")
+
+
+        'ObjExcel.Visible = True  
+
+        'abre el libro  
+        'ObjExcelCopia.Workbooks.Open(PathLibro)
+
+        With ObjExcelCopia
+            Dim SheetO As Object
+            Dim SheetD As Object
+
+            On Error Resume Next
+            SheetO = .Sheets(pNombreHoja)
+            SheetD = .Sheets(NameNuevaHoja)
+
+            If SheetO Is Nothing Then
+                MsgBox("Error. la hoja Origen indicada no existe", vbCritical)
+            End If
+            If Not SheetD Is Nothing Then
+                MsgBox("Error. la hoja Destino ya existe en el libro. " & _
+                       "Indicar otro nombre para la nueva hoja", vbCritical)
+            End If
+
+            If SheetD Is Nothing And Not SheetO Is Nothing Then
+                On Error GoTo 0
+                SheetO = Nothing
+                SheetD = Nothing
+
+            Else
+                SheetO = Nothing
+                SheetD = Nothing
+
+                ObjExcelCopia.Quit()
+                ObjExcelCopia = Nothing
+                Exit Sub
+            End If
+
+            .Sheets.Add() ' agrega con Add una nueva hoja en el libro  
+            .ActiveSheet.Select() ' La selecciona  
+            .ActiveSheet.Name = NameNuevaHoja ' le cambia el nombre  
+            .Sheets(pNombreHoja).Select() ' Se posiciona en la hoja de origen  
+            .Cells.Select() ' selecciona todas las celdas  
+            .Selection.Copy() ' copia el contenido  
+            .Sheets(NameNuevaHoja).Select() ' se posiciona en la nueva hoja  
+            .Cells.Select() ' selecciona  
+            .ActiveSheet.Paste() ' pega los datos  
+            .Application.CutCopyMode = False
+            .ActiveWorkbook.Save() ' graba los cambios en el libro  
+
+        End With
+
+        ' descarga la referencia y cierra el Excel  
+
+
+        'ObjExcelCopia.Quit()
+        ObjExcelCopia = Nothing
+
+
+
+        Exit Sub
+Error_Sub:
+        MsgBox(Err.Description)
+        On Error Resume Next
+
+        ObjExcelCopia = Nothing
+
+        Err.Clear()
+    End Sub
+
+
+    Private Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
+    End Sub
+
+
+
+    Public Function TodasLosIngresosDesosado() As DataTable
+
+        StrConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Auxiliar.mdb;Persist Security Info=False"
+        StrComando = "SELECT * FROM auxingdesosado order by pesadaNo"
+        adapter = New OleDbDataAdapter(StrComando, StrConexion)
+        Cb = New OleDbCommandBuilder(adapter)
+        adapter.Fill(copia, "auxingdesosado")
+        Return copia.Tables("auxingdesosado")
+    End Function
+
+
+
+
+    Public Function TraerUltimonumero() As Integer
+
+        Dim ds As DataSet = EjecutarSQL("SELECT * FROM auxingdesosado WHERE pesadaNo = (SELECT MAX(pesadaNo) FROM auxingdesosado)", Fachada.ConectarAuxChronos)
+        If Not ds Is Nothing AndAlso ds.Tables(0).Rows.Count > 0 Then
+            Return CInt(ds.Tables(0).Rows(0).Item("pesadaNo"))
+        End If
+    End Function
+
+    Public Shared Function _
+              EjecutarSQL(ByVal cadenaSQL As String, ByVal pconectar As System.Data.OleDb.OleDbConnection) As DataSet
+        Dim unaC As OleDbConnection
+        Try
+            unaC = pconectar
+            If unaC IsNot Nothing Then
+                Dim unDs As New DataSet
+                Dim unDataAdapter As OleDbDataAdapter
+                unDataAdapter = _
+                New OleDbDataAdapter _
+                                 (cadenaSQL, unaC)
+                unDataAdapter.Fill(unDs)
+                unDataAdapter.Dispose()
+                unaC.Close()
+                unaC.Dispose()
+                Return unDs
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+
+    Function ToDatarow(ByVal unproducto As Dominio.Salidas.Producto) As DataRow
+        Dim tabla As New auxingdesosadoDataTable
+        Dim unaFila As auxingdesosadoRow = tabla.NewauxingdesosadoRow()
+        unaFila.productoCodigo = unproducto.ProductoCodigo
+        unaFila.procesoNo = unproducto.ProcesoNo
+        unaFila.operadorCodigo = unproducto.OperadorCodigo
+        unaFila.cantidad = unproducto.Cantidad
+        unaFila.hora = unproducto.Hora
+        unaFila.tropaNo = unproducto.TropaNo
+        unaFila.loteNo = unproducto.LoteNo
+        unaFila.pesadaNo = unproducto.PesadaNo
+        unaFila.tara = unproducto.Tara
+        unaFila.pesoNeto = unproducto.PesoNeto
+        unaFila.prevDOTNo = unproducto.PrevDOTNo
+        unaFila.prevDOTNo1 = unproducto.PrevDOTNo1
+        unaFila.prevDOTNo2 = unproducto.PrevDOTNo2
+        unaFila.prevDOTNo3 = unproducto.PrevDOTNo3
+        unaFila.prevDOTNo4 = unproducto.PrevDOTNo4
+        unaFila.prevDOTNo5 = unproducto.PrevDOTNo5
+        unaFila.prevDOTNo6 = unproducto.PrevDOTNo6
+        unaFila.prevDOTNo7 = unproducto.PrevDOTNo7
+        unaFila.prevDOTNo8 = unproducto.PrevDOTNo8
+        unaFila.prevDOTNo9 = unproducto.PrevDOTNo9
+        unaFila.prevDOTNo10 = unproducto.PrevDOTNo10
+        unaFila.prevDOTNo11 = unproducto.PrevDOTNo11
+        unaFila.regtype = unproducto.Regtype
+        unaFila.ph = unproducto.PH
+
+        Return unaFila
+    End Function
+
+    Public Function Guardar(ByVal datospersistente As DataRow) As Boolean
+        ' Verificar el tipo de objeto
+        Try
+            Dim filaDatos As auxingdesosadoRow = CType(datospersistente, auxingdesosadoRow)
+            'Instanciar una conexión
+            Dim unaConexion As OleDbConnection
+            unaConexion = New OleDbConnection(StrConexion)
+            ' Crear un data adapter
+            Dim unDataAdapter As OleDbDataAdapter = _
+               New OleDbDataAdapter("Select * from auxingdesosado", _
+                  unaConexion)
+            ' Crear un command builder para ese data adapter
+            Dim unComando As New _
+            OleDb.OleDbCommandBuilder(unDataAdapter)
+            ' Pedirle que llene un dataset (incluye nombre tabla)
+            Dim unDataset As New DsIngresoDesosado
+            unDataAdapter.Fill(unDataset, "auxingdesosado")
+            ' Crear una nueva fila con la estructura de la tabla
+            Dim unaTabla As DsIngresoDesosado.auxingdesosadoDataTable = unDataset.auxingdesosado
+            Dim nuevaFila As auxingdesosadoRow = unaTabla.NewauxingdesosadoRow()
+
+            nuevaFila.productoCodigo = filaDatos.productoCodigo
+            nuevaFila.procesoNo = filaDatos.procesoNo
+            nuevaFila.operadorCodigo = filaDatos.operadorCodigo
+            nuevaFila.cantidad = filaDatos.cantidad
+            nuevaFila.hora = filaDatos.cantidad
+            nuevaFila.tropaNo = filaDatos.tropaNo
+            nuevaFila.loteNo = filaDatos.loteNo
+            nuevaFila.pesadaNo = filaDatos.pesadaNo
+            nuevaFila.tara = filaDatos.tara
+            nuevaFila.pesoNeto = filaDatos.pesoNeto
+            nuevaFila.prevDOTNo = filaDatos.prevDOTNo
+            nuevaFila.prevDOTNo1 = filaDatos.prevDOTNo1
+            nuevaFila.prevDOTNo2 = filaDatos.prevDOTNo2
+            nuevaFila.prevDOTNo3 = filaDatos.prevDOTNo3
+            nuevaFila.prevDOTNo4 = filaDatos.prevDOTNo4
+            nuevaFila.prevDOTNo5 = filaDatos.prevDOTNo5
+            nuevaFila.prevDOTNo6 = filaDatos.prevDOTNo6
+            nuevaFila.prevDOTNo7 = filaDatos.prevDOTNo7
+            nuevaFila.prevDOTNo8 = filaDatos.prevDOTNo8
+            nuevaFila.prevDOTNo9 = filaDatos.prevDOTNo9
+            nuevaFila.prevDOTNo10 = filaDatos.prevDOTNo10
+            nuevaFila.prevDOTNo11 = filaDatos.prevDOTNo11
+            nuevaFila.regtype = filaDatos.regtype
+            nuevaFila.ph = filaDatos.ph
+
+            unaTabla.AddauxingdesosadoRow(nuevaFila)
+
+            ' Que el data adapter actualice la BD con los cambios
+            unDataAdapter.Update(unDataset, "auxingdesosado")
+            ' Cerrar todo
+            unDataAdapter.Dispose()
+            unaConexion.Close()
+            unaConexion.Dispose()
+            Return True
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Return False
+        End Try
+    End Function
+
+
+    Public Function BuscarRemplazar(ByVal valor As String, ByVal nombre As String) As Boolean
+        'Recorro archivo txt y paso a Arraylist
+        Dim bandera As Boolean = False
+        Dim lista As List(Of String)
+        Dim stock As String
+        Dim NombreArchivo As String = "modificado"
+        If Me.listarLineasTxtModificado.Count > 0 Then
+            lista = Me.listarLineasTxtModificado
+        Else
+            lista = Me.listarLineasTxt
+        End If
+
+        Dim i As Integer = 0
+        Do While i < lista.Count - 1 And Not bandera
+            If lista.Item(i).StartsWith(valor) Then
+                stock = lista.Item(i).Substring(lista.Item(i).IndexOf(";") + 1) & Chr(13)
+
+                'Linea Nueva
+                Dim Linea As String = (valor) & "," & nombre & ";" & CStr(stock)
+                lista.Item(i) = Linea
+                bandera = True
+            End If
+            i += 1
+        Loop
+        'Recorro lista y escribo en TXT
+        Dim sw As New StreamWriter((NombreArchivo & ".txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+        Return bandera
+    End Function
+
+    Public Function buscarcodigo()
+        Dim lista As List(Of String)
+        If Me.listarLineasTxtModificado.Count > 0 Then
+            lista = Me.listarLineasTxtModificado
+        Else
+            lista = Me.listarLineasTxt
+        End If
+
+        'Recorro Arraylist y encuentro plato y actualizo stock
+        Dim i As Integer = 0
+        Dim bandera As Boolean = False
+        ' Do While i < lista.Count - 1 And Not bandera
+        Do While i < lista.Count - 1
+            If lista.Item(i).StartsWith("<STX><ESC>F") Then
+                Dim Linea As String
+                Linea = lista.Item(i).Substring(lista.Item(i).IndexOf("F") + 1)
+                Dim codigoVariabletmp As String
+                Dim codigoVariable As String
+                Dim nombreVariable As String
+
+                codigoVariable = Linea.Substring(0, 2)
+                codigoVariabletmp = codigoVariable.Replace("<", "")
+                If codigoVariable.Length <> codigoVariabletmp.Length Then
+                    nombreVariable = Linea.Replace("<ETX>", "")
+                    nombreVariable = nombreVariable.Replace("<DEL>", "")
+                    nombreVariable = nombreVariable.Replace(codigoVariabletmp, "")
+                    codigoVariabletmp = Linea.Substring(0, 1)
+                    bandera = Me.BuscarRemplazar("<STX>H" & codigoVariabletmp, nombreVariable)
+                Else
+                    nombreVariable = Linea.Replace("<ETX>", "")
+                    nombreVariable = nombreVariable.Replace("<DEL>", "")
+                    nombreVariable = nombreVariable.Replace(codigoVariabletmp, "")
+                    codigoVariabletmp = Linea.Substring(0, 2)
+                    bandera = Me.BuscarRemplazar("<STX>H" & codigoVariabletmp, nombreVariable)
+                End If
+
+
+                'Linea Nueva
+                ' Dim Lineanueva As String = (codigo) & ",&codbr" & ";" & CStr(stock)
+                ' lista.Item(i) = Linea
+                ' bandera = True
+            End If
+            i += 1
+        Loop
+    End Function
+
+
+    Public Function listarLineasTxt() As List(Of String)
+        Dim sr As StreamReader
+        sr = New StreamReader("registros.txt")
+        Dim Line As String = sr.ReadLine()
+        Dim lista As New List(Of String)
+        While Not (Line Is Nothing)
+            lista.Add(Line)
+            Line = sr.ReadLine()
+        End While
+        sr.Close()
+        Return lista
+    End Function
+
+    Public Function listarLineasTxtInternet() As List(Of String)
+        Dim sr As StreamReader
+        sr = New StreamReader("RegistroInternet.txt")
+        Dim Line As String = sr.ReadLine()
+        Dim lista As New List(Of String)
+        While Not (Line Is Nothing)
+            lista.Add(Line)
+            Line = sr.ReadLine()
+        End While
+        sr.Close()
+        Return lista
+    End Function
+
+
+    Public Function listarLineasTxtModificado() As List(Of String)
+        Dim sr As StreamReader
+        sr = New StreamReader("modificado.txt")
+        Dim Line As String = sr.ReadLine()
+        Dim lista As New List(Of String)
+        While Not (Line Is Nothing)
+            lista.Add(Line)
+            Line = sr.ReadLine()
+        End While
+        sr.Close()
+        Return lista
+    End Function
+
+    Public Function GuardarRegistroTelefono(ByVal texto As String) As Boolean
+        Dim id As Integer
+        Dim interno As Integer
+        Dim code As String
+        Dim duracion As DateTime
+        Dim fecha As Date
+        Dim horainicio As DateTime
+        Dim tipollamada As String
+        Dim telefono As String
+        Dim conta As Integer = 0
+
+
+        Dim comprueba As String = (texto.Substring(0, 4))
+        If Integer.TryParse(comprueba, 0) = True Then
+            id = (texto.Substring(0, 4))
+            conta += 1
+        End If
+
+        comprueba = String.Empty
+        comprueba = texto.Substring(5, 3)
+        If Integer.TryParse(comprueba, 0) = True Then
+            interno = texto.Substring(5, 3)
+            conta += 1
+        End If
+        code = texto.Substring(11, 3)
+
+
+        comprueba = String.Empty
+        comprueba = texto.Substring(15, 8)
+        If DateTime.TryParse(comprueba, "00:00:00") = True Then
+            duracion = texto.Substring(15, 8)
+            conta += 1
+        End If
+
+        comprueba = String.Empty
+        comprueba = texto.Substring(24, 8)
+        If DateTime.TryParse(comprueba, "00:00:00") = True Then
+            fecha = texto.Substring(24, 8)
+            conta += 1
+        End If
+
+        comprueba = String.Empty
+        comprueba = texto.Substring(33, 5)
+        If DateTime.TryParse(comprueba, "00:00:00") = True Then
+            horainicio = texto.Substring(33, 5)
+            conta += 1
+        End If
+
+        tipollamada = texto.Substring(39, 1)
+        telefono = texto.Substring(40, 11)
+
+        If conta = 5 Then
+            Dim unregistroTelefonocio As New RegistroTelefonico(id, tipollamada, interno, code, duracion, fecha, horainicio, telefono)
+            'Guardo en Base
+            Return unregistroTelefonocio.Guardar()
+        End If
+
+        Return False
+    End Function
+
+
+    Public Function GuardarRegistrotemporal(ByVal unreg As RegistroTelefonico) As Boolean
+        Return unreg.GuardarTemporal()
+    End Function
+
+    Public Function TodasLosRegistrosTelefonicos() As List(Of RegistroTelefonico)
+        Dim cadenaConsulta As String, colRetorno As New List(Of RegistroTelefonico)
+        cadenaConsulta = "Select * from regTelefonos order by id"
+        Dim dsRegistroTel As DataSet
+        Dim unpregistro As New Persistencia.pRegistroTelefonico
+        dsRegistroTel = unpregistro.EjecutarSQL(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unregistro As RegistroTelefonico
+        For Each unaFila In dsRegistroTel.Tables(0).Rows
+            unregistro = New RegistroTelefonico
+            unregistro.id = CInt(unaFila.Item("id"))
+            unregistro.tipo = CStr(unaFila.Item("tipo"))
+            unregistro.interno = CInt(unaFila.Item("interno"))
+            unregistro.code = CStr(unaFila.Item("code"))
+            unregistro.duracion = (unaFila.Item("duracion"))
+            unregistro.fecha = CDate(unaFila.Item("fecha"))
+            unregistro.horaInicio = (unaFila.Item("horaInicio"))
+            unregistro.Telefono = CStr(unaFila.Item("telefono"))
+            colRetorno.Add(unregistro)
+            unregistro = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Function BuscarRegistrosTelefonicos(ByVal ini As Date, ByVal fin As Date) As List(Of RegistroTelefonico)
+        Dim colRetorno As New List(Of RegistroTelefonico)
+        Dim cadenaConsulta As String = "select * from regTelefonos where fecha >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and fecha <#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "# order by interno"
+        'Dim cadenaConsulta As String = "select * from regTelefonos order by fecha "
+
+        Dim dsRegistroTel As DataSet
+        Dim unpregistro As New Persistencia.pRegistroTelefonico
+        dsRegistroTel = unpregistro.EjecutarSQL(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unregistro As RegistroTelefonico
+        For Each unaFila In dsRegistroTel.Tables(0).Rows
+            unregistro = New RegistroTelefonico
+            unregistro.id = CInt(unaFila.Item("id"))
+            unregistro.tipo = CStr(unaFila.Item("tipo"))
+            unregistro.interno = CInt(unaFila.Item("interno"))
+            unregistro.code = CStr(unaFila.Item("code"))
+            unregistro.duracion = (unaFila.Item("duracion"))
+            unregistro.fecha = CDate(unaFila.Item("fecha"))
+            unregistro.horaInicio = (unaFila.Item("horaInicio"))
+            unregistro.Telefono = CStr(unaFila.Item("telefono"))
+            colRetorno.Add(unregistro)
+            unregistro = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Sub LimpiarRegistroTemporal()
+        Dim unpRegistroTemporal As New pRegistroTelefonico
+        unpRegistroTemporal.LimpiarRegistroTemporal()
+    End Sub
+
+
+    Public Function BuscarRegistrosTelefonicosCorte(ByVal ini As Date, ByVal fin As Date) As List(Of RegistroTelefonico)
+
+        Dim colRetorno As New List(Of RegistroTelefonico)
+        Dim cadenaConsulta As String = "select * from regTelefonos where fecha >= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and fecha <#" & fin.Month & "/" & fin.Day & "/" & fin.Year & "# order by interno"
+        Dim dsRegistroTel As DataSet
+        Dim unpregistro As New Persistencia.pRegistroTelefonico
+        unpregistro.LimpiarRegistroTemporal()
+        dsRegistroTel = unpregistro.EjecutarSQL(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unregistro As RegistroTelefonico
+        Dim i As Integer = 0
+        Dim internoAnt As Integer
+        Dim terminainterno As Boolean
+        Dim duracion As DateTime
+
+        If dsRegistroTel.Tables(0).Rows.Count > 0 Then
+            Do While i < dsRegistroTel.Tables(0).Rows.Count
+                terminainterno = False
+                duracion = "00:00:00"
+                internoAnt = CType(dsRegistroTel.Tables(0).Rows(i).Item("interno"), Integer)
+                Do While i < dsRegistroTel.Tables(0).Rows.Count And Not terminainterno
+                    duracion += CType(dsRegistroTel.Tables(0).Rows(i).Item("duracion"), DateTime).TimeOfDay
+                    i += 1
+                    If i < dsRegistroTel.Tables(0).Rows.Count Then
+                        If CType(dsRegistroTel.Tables(0).Rows(i).Item("interno"), Integer) <> internoAnt Then
+                            terminainterno = True
+                        End If
+                    End If
+
+                Loop
+                unregistro = New RegistroTelefonico
+                unregistro.id = i
+                unregistro.tipo = "SALIENTE"
+                unregistro.interno = internoAnt
+                unregistro.code = "000"
+                unregistro.duracion = duracion
+                unregistro.fecha = CType(dsRegistroTel.Tables(0).Rows(i - 1).Item("fecha"), Date)
+                unregistro.horaInicio = "00:00:00"
+                unregistro.Telefono = ""
+                Me.GuardarRegistrotemporal(unregistro)
+                colRetorno.Add(unregistro)
+                unregistro = Nothing
+            Loop
+        End If
+        Return colRetorno
+    End Function
+
+    Public Function CorteTelefonicos(ByVal ini As Date) As List(Of RegistroTelefonico)
+        Dim colRetorno As New List(Of RegistroTelefonico)
+        Dim cadenaConsulta As String = "select * from regTelefonos where fecha = #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "#  order by interno"
+        Dim dsRegistroTel As DataSet
+        Dim unpregistro As New Persistencia.pRegistroTelefonico
+        dsRegistroTel = unpregistro.EjecutarSQL(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unregistro As RegistroTelefonico
+        Dim i As Integer = 0
+        Dim internoAnt As Integer
+        Dim terminainterno As Boolean
+        Dim duracion As DateTime
+
+        If dsRegistroTel.Tables(0).Rows.Count > 0 Then
+            Do While i < dsRegistroTel.Tables(0).Rows.Count
+                terminainterno = False
+                duracion = "00:00:00"
+                internoAnt = CType(dsRegistroTel.Tables(0).Rows(i).Item("interno"), Integer)
+                Do While i < dsRegistroTel.Tables(0).Rows.Count And Not terminainterno
+                    duracion += CType(dsRegistroTel.Tables(0).Rows(i).Item("duracion"), DateTime).TimeOfDay
+                    i += 1
+                    If i < dsRegistroTel.Tables(0).Rows.Count Then
+                        If CType(dsRegistroTel.Tables(0).Rows(i).Item("interno"), Integer) <> internoAnt Then
+                            terminainterno = True
+                        End If
+                    End If
+
+                Loop
+                unregistro = New RegistroTelefonico
+                unregistro.id = i
+                unregistro.tipo = "SALIENTE"
+                unregistro.interno = internoAnt
+                unregistro.code = "000"
+                unregistro.duracion = duracion
+                unregistro.fecha = CType(dsRegistroTel.Tables(0).Rows(i - 1).Item("fecha"), Date)
+                unregistro.horaInicio = "00:00:00"
+                unregistro.Telefono = ""
+                Me.GuardarRegistrotemporal(unregistro)
+                colRetorno.Add(unregistro)
+                unregistro = Nothing
+            Loop
+        End If
+        Return colRetorno
+    End Function
+
+
+    Public Function BuscarLineaTxt(ByVal codigo As Integer) As Object
+        'Dim NombreArchivo As String = Today.Year.ToString & Today.Month.ToString & Today.Day.ToString
+        'Dim lista As ArrayList = Me.obtenermenu()
+        'Dim i As Integer = 0
+        'For i = 0 To lista.Count - 1
+        '    If lista.Item(i).StartsWith(codigo) Then
+        '        Return Me.BuscarPlatos(codigo)
+        '    End If
+        'Next
+        'Return Nothing
+    End Function
+
+
+    Public Function GenerarArchivoTxtCaravanas(ByVal lista As List(Of String), ByVal pNombreArchivo As String) As Boolean
+
+        If File.Exists(pNombreArchivo & ".txt") Then
+            Dim Spath As String = pNombreArchivo & ".txt"
+            ' Archivo  
+            My.Computer.FileSystem.DeleteFile( _
+                Spath, _
+                FileIO.UIOption.AllDialogs, _
+                FileIO.RecycleOption.SendToRecycleBin, _
+                FileIO.UICancelOption.DoNothing)
+        End If
+
+
+        Dim i As Integer = 0
+        'CREA EL ARCHIVO TXT
+        Dim sw As New StreamWriter((pNombreArchivo & ".txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+
+    Public Function AgregarLineasTxt(ByVal lista As List(Of String)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("registros.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+    Public Function AgregarLineasTxtJornales(ByVal lista As List(Of String)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("registrosJornales.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+    Public Function AgregarLineasTxtInternet(ByVal lista As List(Of String)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("RegistroInternet.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+    Public Function AgregarLineasTxtAno(ByVal lista As List(Of String)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("registrosAno.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+    Public Function AgregarErroresTransferencia(ByVal pcadena As String) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter("\\servidordb\Prueba Martin\ErrorTransferencia.txt")
+        sw.WriteLine(pcadena)
+        sw.Close()
+    End Function
+
+
+
+
+
+    Public Function AgregarLineasTxtPesadas(ByVal lista As List(Of String)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("pesadas.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i))
+        Next
+        sw.Close()
+    End Function
+
+
+    Public Function ActualizarLineaTxt(ByVal pidpedido As Integer) As Boolean
+        'Dim bandera As Boolean = False
+        'If Me.listapedidosplatos.Count > 0 Then
+        '    Dim i As Integer = 0
+        '    For i = 0 To Me.listapedidosplatos.Count - 1
+        '        If listapedidosplatos.Item(i).idpedido = pidpedido Then
+        '            Dim id As Integer = listapedidosplatos.Item(i).idplatos
+        '            Dim cantidad As Integer = listapedidosplatos.Item(i).cantidad
+        '            bandera = Me.BuscarRemplazar(id, cantidad)
+        '        End If
+        '    Next
+        'End If
+        'Return bandera
+    End Function
+
+
+
+
+    Sub New(ByVal pnom As String)
+
+        If pnom = "ACTUALIZA" Then
+
+        Else
+
+            Me.nombre = pnom
+            Me.listaTelefonos = New List(Of String)
+            'Me.ListaTransferencias = New List(Of ImportarTransferencia)
+            Dim aux As List(Of Informados) = CargarListaInformados()
+            If aux.Count > 0 Then
+                Me.listaInformados = aux
+            Else
+                Me.listaInformados = New List(Of Informados)
+
+            End If
+
+            Me.listaTelefonos = listarLineasTxt()
+        End If
+    End Sub
+
+    Public Function TODOSLOSPRODUCTOS(ByVal pcod As Integer) As DataSet
+        Dim cadenaConsulta As String
+        If pcod = 0 Then
+            cadenaConsulta = "Select * from codinf order by CODIGO"
+        Else
+            cadenaConsulta = "Select * from codinf where CODIGO =" & pcod
+        End If
+        Dim dsproductos As DataSet
+        dsproductos = Persistencia.pPersistente.EjecutarSQLSERVIDOR(cadenaConsulta)
+        Return dsproductos
+
+    End Function
+
+    Public Function BuscarProducto(ByVal pcod As Integer) As Producto
+        Dim unproducto As Producto, unDs As DataSet
+        unDs = TODOSLOSPRODUCTOS(pcod)
+        If unDs.Tables(0).Rows.Count > 0 Then
+            Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+            unproducto = New Producto(CType(unafila.Item("CODIGO"), Integer), CType(unafila.Item("DESCRI"), String), CType(unafila.Item("grupodesotxt"), String))
+        End If
+        Return unproducto
+
+    End Function
+
+
+
+
+
+
+    Public Function leerWebServiceCaravanas(ByVal pfecha As String) As List(Of WebReference.Lectura)
+        'Dim fecha As String = "08/09/2011"
+        'Dim planta As Integer = 42
+        Dim UnaListaCarvanas As New List(Of WebReference.Lectura)
+        Dim svc As New WebReference.Service
+        '   Dim a() As WebReference.Lectura = svc.ConsultarCaravanas("20110908", 42)
+
+        '   pfecha = 20120109
+
+        Dim a() As WebReference.Lectura = svc.ConsultarCaravanas(pfecha)
+        ' Dim a() As WebReference.Lectura = svc.ConsultarCaravanas("16/02/2012")
+        Dim i As Integer = 0
+
+        Do While i < a.Length
+            Dim UnaCaravana As New WebReference.Lectura
+            UnaCaravana.Caravana = a(i).Caravana
+            UnaCaravana.FechaInsercionDB = a(i).FechaInsercionDB
+            UnaCaravana.FechaLectura = a(i).FechaLectura
+            UnaCaravana.Ordinal = a(i).Ordinal
+            UnaCaravana.TipoRegistro = a(i).TipoRegistro
+            UnaListaCarvanas.Add(UnaCaravana)
+            i += 1
+        Loop
+        Return UnaListaCarvanas
+
+    End Function
+
+    Public Function GuardarCaravanas(ByVal pfecha As String, ByVal pordinal As Integer, ByVal pnumerocaravana As String, ByVal ptropa As Integer, ByVal plote As Integer, ByVal pdicose As String) As Boolean
+        Dim unpCaravanas As New pCaravanas
+        Return unpCaravanas.GuardarCaravanas(pfecha, pordinal, pnumerocaravana, ptropa, plote, pdicose)
+    End Function
+
+
+    Public Function ModificarCaravanas(ByVal pfecha As String, ByVal pordinal As Integer, ByVal pnumerocaravana As String) As Boolean
+        Dim unpCaravanas As New pCaravanas
+        Return unpCaravanas.ModificarCaravana(pfecha, pordinal, pnumerocaravana)
+    End Function
+
+
+
+
+    Public Function leerWebServiceProgramaFaena(ByVal pFecha As Date) As List(Of ProgramaFaena)
+        Dim MatrizProducto As Object
+        Dim svc As Salidas.Salidas = New Salidas.Salidas()
+        ' Dim ultimapesada As Integer = pultimodot
+
+        Dim mes As String = pFecha.Month
+        Dim dia As String = pFecha.Day
+
+        If mes.Length = 1 Then
+            mes = "0" & pFecha.Month
+        End If
+
+        If dia.Length = 1 Then
+            dia = "0" & pFecha.Day
+        End If
+
+        Dim fecha As String = dia & "/" & mes & "/" & pFecha.Year
+
+        'Dim fin As Boolean
+
+        Dim ProgramaFaena As Salidas.ProgramaFaenaResult = svc.ProgramaFaena(fecha)
+
+
+
+        MatrizProducto = ProgramaFaena.Grupos
+        Dim unproducto As Dominio.Salidas.Grupo
+        ' Dim datasetprueba As New DataTable
+
+        'Dim tropa, lote, cantidad, secuencia As String
+        Dim ListaProgramaFaena As New List(Of ProgramaFaena)
+
+        For Each unproducto In MatrizProducto
+            Dim cabezal As Salidas.CabezalTropaResult = svc.Cabezal(unproducto.TropaNo)
+
+
+            Dim dicose As String = cabezal.DicoseCodigo
+
+            'GENERO LINEA FAENA CON DATOS PRODUCTOR ETC.
+            Dim unaLineaProgFaena As New ProgramaFaena
+            unaLineaProgFaena.cantidad = unproducto.Cantidad
+            unaLineaProgFaena.lote = unproducto.LoteNo
+            unaLineaProgFaena.secuencia = unproducto.Secuencia
+            unaLineaProgFaena.tropa = unproducto.TropaNo
+            unaLineaProgFaena.cabezal = cabezal
+
+            ListaProgramaFaena.Add(unaLineaProgFaena)
+
+            '   Guardar(unalinea)
+        Next
+
+        '   datasetprueba.WriteXml("obj.xml")
+
+        'While fin = False
+        '    Dim unProductoIngresados As Salidas.DesosadoResultDotNo = svc.DesosadoDotNo(ultimapesada)
+        '    If unProductoIngresados.Productos.Length > 0 Then
+        '        unProductoIngresados = svc.DesosadoDotNo(ultimapesada)
+        '        Dim elproducto As Dominio.Salidas.Producto = unProductoIngresados.Productos(0)
+        '        Dim unalinea As DataRow = Me.ToDatarow(elproducto)
+        '        Guardar(unalinea)
+        '        ultimapesada = ultimapesada + 1
+        '    Else
+        '        fin = True
+        '        TodasLosIngresosDesosado.WriteXml("obj.xml")
+        '        Return TodasLosIngresosDesosado()
+
+        '    End If
+        'End While
+        '--------------------------------------------------------------------------------------------------
+        '--------------------------------------------------------------------------------------------------
+        Return ListaProgramaFaena
+    End Function
+
+
+    Public Function TodasLasCarvanas(ByVal pfecha As String) As DataSet
+        Dim cadenaConsulta As String = "select * from Faltantes where fecha =" & """" & pfecha & """" & "order by ordinal"
+        Dim DsCaravanas As DataSet
+        DsCaravanas = EjecutarSQL(cadenaConsulta, Fachada.ConectarCaravanas)
+        Return DsCaravanas
+    End Function
+
+
+
+
+
+
+
+#Region "ETIQUETAS"
+
+    Public Function AgregarEtiqueta(ByVal unetiqueta As Etiqueta) As Boolean
+        Return unetiqueta.Guardar()
+    End Function
+
+    Public Function BuscarEtiquetaxNombre(ByVal pnom As String) As Etiqueta
+        Dim unpetiqueta As Persistencia.pEtiqueta = New Persistencia.pEtiqueta
+        Dim unetiqueta As Etiqueta, unDs As DataSet
+        If pnom = "" Then
+        Else
+            Dim cadena As String = "select * from etiquetas where Etiqueta_nom =" & "'" & pnom & "'"
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unetiqueta = New Etiqueta(CType(unafila.Item("Etiqueta_id"), String), CType(unafila.Item("Etiqueta_nombre"), String), CType(unafila.Item("Etiqueta_tit1"), String), CType(unafila.Item("Etiqueta_tit2"), String), CType(unafila.Item("Etiqueta_tit3"), String), CType(unafila.Item("Etiqueta_tit4"), String), CType(unafila.Item("Etiqueta_tit5"), String), CType(unafila.Item("Etiqueta_fecha"), Date), CType(unafila.Item("Etiqueta_fecha2"), Date), CType(unafila.Item("Etiqueta_fecha3"), Date), CType(unafila.Item("Etiqueta_descripcion"), String), CType(unafila.Item("Etiqueta_pais"), String), CType(unafila.Item("Etiqueta_estado"), Integer))
+            End If
+            Return unetiqueta
+        End If
+    End Function
+
+    Public Function ModificarEtiqueta(ByVal unEtiqueta As Etiqueta) As Boolean
+        If unEtiqueta.Equals(BuscarEtiqueta(unEtiqueta.id)) Then
+            Return False
+        Else
+            unEtiqueta.Modificar()
+            Return True
+        End If
+    End Function
+
+    Public Function BuscarEtiqueta(ByVal pid As String) As Etiqueta
+        Dim unpetiqueta As Persistencia.pEtiqueta = New Persistencia.pEtiqueta
+        Dim unetiqueta As Etiqueta, unDs As DataSet
+        If pid = "" Then
+        Else
+            Dim cadena As String = "select * from etiquetas where Etiqueta_id =" & pid
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unetiqueta = New Etiqueta(CType(unafila.Item("Etiqueta_id"), String), CType(unafila.Item("Etiqueta_nombre"), String), CType(unafila.Item("Etiqueta_tit1"), String), CType(unafila.Item("Etiqueta_tit2"), String), CType(unafila.Item("Etiqueta_tit3"), String), CType(unafila.Item("Etiqueta_tit4"), String), CType(unafila.Item("Etiqueta_tit5"), String), CType(unafila.Item("Etiqueta_fecha"), Date), CType(unafila.Item("Etiqueta_fecha2"), Date), CType(unafila.Item("Etiqueta_fecha3"), Date), CType(unafila.Item("Etiqueta_descripcion"), String), CType(unafila.Item("Etiqueta_pais"), String), CType(unafila.Item("Etiqueta_estado"), Integer))
+            End If
+            Return unetiqueta
+        End If
+    End Function
+
+    Public Function TodasLasEtiquetas() As List(Of Etiqueta)
+        Dim cadenaConsulta As String, colRetorno As New List(Of Etiqueta)
+        cadenaConsulta = "Select * from etiquetas order by Etiqueta_nom"
+        Dim dsEtiquetas As DataSet
+        dsEtiquetas = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unEtiqueta As Etiqueta
+        For Each unaFila In dsEtiquetas.Tables(0).Rows
+            unEtiqueta = New Etiqueta
+            unEtiqueta.id = CInt(unaFila.Item("Etiqueta_id"))
+            unEtiqueta.nombre = CStr(unaFila.Item("Etiqueta_nom"))
+            unEtiqueta.titulo1 = CStr(unaFila.Item("Etiqueta_tit1"))
+            unEtiqueta.titulo2 = CStr(unaFila.Item("Etiqueta_tit2"))
+            unEtiqueta.titulo3 = CStr(unaFila.Item("Etiqueta_tit3"))
+            unEtiqueta.titulo4 = CStr(unaFila.Item("Etiqueta_tit4"))
+            unEtiqueta.titulo5 = CStr(unaFila.Item("Etiqueta_tit5"))
+            unEtiqueta.fecha = CDate(unaFila.Item("Etiqueta_fecha"))
+            unEtiqueta.fecha2 = CDate(unaFila.Item("Etiqueta_fecha2"))
+            unEtiqueta.fecha3 = CDate(unaFila.Item("Etiqueta_fecha3"))
+            unEtiqueta.descripcion = CStr(unaFila.Item("Etiqueta_descripcion"))
+            unEtiqueta.pais = CStr(unaFila.Item("Etiqueta_pais"))
+            unEtiqueta.estado = CInt(unaFila.Item("Etiqueta_estado"))
+            colRetorno.Add(unEtiqueta)
+            unEtiqueta = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+
+#End Region
+
+#Region "CAJAS"
+
+    Public Function AgregarCajas(ByVal unacaja As caja) As Boolean
+        Return unacaja.Guardar()
+    End Function
+
+    Public Function BuscarCajaxNombre(ByVal pnom As String) As caja
+        Dim unpcaja As Persistencia.pcaja = New Persistencia.pcaja
+        Dim unacaja As caja, unDs As DataSet
+        If pnom = "" Then
+        Else
+            Dim cadena As String = "select * from caja where cajas_contiene =" & "'" & pnom & "'"
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unacaja = New caja(CType(unafila.Item("cajas_id"), Integer), CType(unafila.Item("cajas_numero"), Integer), CType(unafila.Item("cajas_contiene"), String), CType(unafila.Item("cajas_des"), String), CType(unafila.Item("cajas_fecha"), Date), CType(unafila.Item("cajas_ubi"), String), CType(unafila.Item("cajas_desde"), Date), CType(unafila.Item("cajas_hasta"), Date), CType(unafila.Item("cajas_desde_num"), Integer), CType(unafila.Item("cajas_hasta_num"), Integer))
+            End If
+            Return unacaja
+        End If
+    End Function
+
+    Public Function ModificarCaja(ByVal unacaja As caja) As Boolean
+        If unacaja.Equals(BuscarEtiqueta(unacaja.id)) Then
+            Return False
+        Else
+            unacaja.Modificar()
+            Return True
+        End If
+    End Function
+
+    Public Function BuscarCaja(ByVal pid As Integer) As caja
+        Dim unpcaja As Persistencia.pcaja = New Persistencia.pcaja
+        Dim unacaja As caja, unDs As New DataSet
+        Dim cadena As String = "select * from cajas where cajas_id =" & pid
+        unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+        If unDs.Tables(0).Rows.Count > 0 Then
+            Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+            unacaja = New caja(CType(unafila.Item("cajas_id"), Integer), CType(unafila.Item("cajas_numero"), Integer), CType(unafila.Item("cajas_contiene"), String), CType(unafila.Item("cajas_des"), String), CType(unafila.Item("cajas_fecha"), Date), CType(unafila.Item("cajas_ubi"), String), CType(unafila.Item("cajas_desde"), Date), CType(unafila.Item("cajas_hasta"), Date), CType(unafila.Item("cajas_desde_num"), Integer), CType(unafila.Item("cajas_hasta_num"), Integer))
+        End If
+        Return unacaja
+
+    End Function
+
+    Public Function TodasLasCajas() As List(Of caja)
+        Dim cadenaConsulta As String, colRetorno As New List(Of caja)
+        cadenaConsulta = "Select * from cajas order by cajas_id"
+        Dim dscajas As DataSet
+        dscajas = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unacaja As caja
+        For Each unaFila In dscajas.Tables(0).Rows
+            unacaja = New caja
+            unacaja.id = CInt(unaFila.Item("cajas_id"))
+            unacaja.idcaja = CInt(unaFila.Item("cajas_numero"))
+            unacaja.contiene = CStr(unaFila.Item("cajas_contiene"))
+            unacaja.fecha = CDate(unaFila.Item("cajas_fecha"))
+            unacaja.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+            unacaja.desde = CDate(unaFila.Item("cajas_desde"))
+            unacaja.hasta = CDate(unaFila.Item("cajas_hasta"))
+            unacaja.numeraciondesde = CInt(unaFila.Item("cajas_desde_num"))
+            unacaja.numeracionhasta = CInt(unaFila.Item("cajas_hasta_num"))
+            unacaja.descripcion = CStr(unaFila.Item("cajas_des"))
+            colRetorno.Add(unacaja)
+            unacaja = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Function TodasLasCajasxid(ByVal pid As Integer) As List(Of caja)
+        Dim cadenaConsulta As String, colRetorno As New List(Of caja)
+        cadenaConsulta = "Select * from cajas where cajas_numero =" & pid & " order by cajas_id "
+        Dim dscajas As DataSet
+        dscajas = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unacaja As caja
+        For Each unaFila In dscajas.Tables(0).Rows
+            unacaja = New caja
+            unacaja.id = CInt(unaFila.Item("cajas_id"))
+            unacaja.idcaja = CInt(unaFila.Item("cajas_numero"))
+            unacaja.contiene = CStr(unaFila.Item("cajas_contiene"))
+            unacaja.fecha = CDate(unaFila.Item("cajas_fecha"))
+            unacaja.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+            unacaja.desde = CDate(unaFila.Item("cajas_desde"))
+            unacaja.hasta = CDate(unaFila.Item("cajas_hasta"))
+            unacaja.numeraciondesde = CInt(unaFila.Item("cajas_desde_num"))
+            unacaja.numeracionhasta = CInt(unaFila.Item("cajas_hasta_num"))
+            unacaja.descripcion = CStr(unaFila.Item("cajas_des"))
+            colRetorno.Add(unacaja)
+            unacaja = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+
+
+    Public Function BuscarCajasFechas(ByVal ini As Date, ByVal pparametro As String) As List(Of caja)
+        Dim colRetorno As New List(Of caja)
+        Dim cadenaConsulta As String
+        If pparametro.Length > 0 Then
+            cadenaConsulta = "select * from cajas where cajas_desde<= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_hasta >=#" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_contiene =" & "'" & pparametro & "'" & "order by cajas_id"
+        Else
+            cadenaConsulta = "select * from cajas where cajas_desde<= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_hasta >=#" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# order by cajas_id"
+        End If
+        Dim dscajas As DataSet
+        Dim unpcajas As New Persistencia.pcaja
+        dscajas = pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        If Not dscajas Is Nothing Then
+            Dim unaFila As DataRow
+            Dim unregistro As caja
+            For Each unaFila In dscajas.Tables(0).Rows
+                unregistro = New caja
+                unregistro.id = CInt(unaFila.Item("cajas_id"))
+                unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+                unregistro.contiene = CStr(unaFila.Item("cajas_contiene"))
+                unregistro.fecha = CDate(unaFila.Item("cajas_fecha"))
+                unregistro.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+                unregistro.desde = CDate(unaFila.Item("cajas_desde"))
+                unregistro.hasta = CDate(unaFila.Item("cajas_hasta"))
+                unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+                unregistro.numeraciondesde = CInt(unaFila.Item("cajas_desde_num"))
+                unregistro.numeracionhasta = CInt(unaFila.Item("cajas_hasta_num"))
+                unregistro.descripcion = CStr(unaFila.Item("cajas_des"))
+                colRetorno.Add(unregistro)
+                unregistro = Nothing
+            Next
+        Else
+            MsgBox("No existen Cajas")
+        End If
+        Return colRetorno
+    End Function
+
+    Public Function BuscarCajasNumeroFactura(ByVal pparametro As String, ByVal pnumerofac As Integer) As List(Of caja)
+        Dim colRetorno As New List(Of caja)
+        Dim cadenaConsulta As String
+        If pparametro.Length > 0 Then
+            cadenaConsulta = "select * from cajas where cajas_desde_num<= " & pnumerofac & "and cajas_hasta_num >=" & pnumerofac & "And cajas_contiene = " & " '" & pparametro & "'" & "order by cajas_id"
+        Else
+            cadenaConsulta = "select * from cajas where cajas_desde_num<= " & pnumerofac & "and cajas_hasta_num >=" & pnumerofac
+        End If
+
+
+        Dim dscajas As DataSet
+        Dim unpcajas As New Persistencia.pcaja
+        dscajas = pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        If Not dscajas Is Nothing Then
+            Dim unaFila As DataRow
+            Dim unregistro As caja
+            For Each unaFila In dscajas.Tables(0).Rows
+                unregistro = New caja
+                unregistro.id = CInt(unaFila.Item("cajas_id"))
+                unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+                unregistro.contiene = CStr(unaFila.Item("cajas_contiene"))
+                unregistro.fecha = CDate(unaFila.Item("cajas_fecha"))
+                unregistro.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+                unregistro.desde = CDate(unaFila.Item("cajas_desde"))
+                unregistro.hasta = CDate(unaFila.Item("cajas_hasta"))
+                unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+                unregistro.numeraciondesde = CInt(unaFila.Item("cajas_desde_num"))
+                unregistro.numeracionhasta = CInt(unaFila.Item("cajas_hasta_num"))
+                unregistro.descripcion = CStr(unaFila.Item("cajas_des"))
+                colRetorno.Add(unregistro)
+                unregistro = Nothing
+            Next
+        Else
+            MsgBox("No existen Cajas")
+        End If
+        Return colRetorno
+    End Function
+
+
+
+#End Region
+
+#Region "CABEZAL"
+    Public Function AgregarCabezalCajas(ByVal uncabezal As CabezalCaja) As Boolean
+        Return uncabezal.Guardar()
+    End Function
+
+    Public Function ActualizarIdentificadornCajasLineas(ByVal pnumero As Integer) As Boolean
+        Dim uncajalinea As New caja
+        Return uncajalinea.ActualizarIdentificador(pnumero)
+    End Function
+
+
+    Public Function BuscarCajaCabezalxNombre(ByVal pnom As String) As caja
+        'Dim unpcaja As Persistencia.pcaja = New Persistencia.pcaja
+        'Dim unacaja As caja, unDs As DataSet
+        'If pnom = "" Then
+        'Else
+        '    Dim cadena As String = "select * from caja where cajas_contiene =" & "'" & pnom & "'"
+        '    unDs = Persistencia.pPersistente.EjecutarSQL(cadena)
+        '    If unDs.Tables(0).Rows.Count > 0 Then
+        '        Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+        '        unacaja = New caja(CType(unafila.Item("cajas_id"), Integer), CType(unafila.Item("cajas_numero"), Integer), CType(unafila.Item("cajas_contiene"), String), CType(unafila.Item("cajas_fecha"), Date), CType(unafila.Item("cajas_ubi"), String), CType(unafila.Item("cajas_desde"), Date), CType(unafila.Item("cajas_hasta"), Date))
+        '    End If
+        '    Return unacaja
+        'End If
+    End Function
+
+    Public Function ModificarCabezalCaja(ByVal uncabezal As CabezalCaja) As Boolean
+
+        Return uncabezal.Modificar()
+
+    End Function
+
+    Public Function BuscarCabezalCaja(ByVal pid As Integer) As CabezalCaja
+        Dim unpcabezacaja As Persistencia.pCabezalCaja = New Persistencia.pCabezalCaja
+        Dim unacaja As CabezalCaja, unDs As New DataSet
+
+        Dim cadena As String = "select * from cabezalcaja where cabezal_caja_id =" & pid
+        unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+        If unDs.Tables(0).Rows.Count > 0 Then
+            Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+            unacaja = New CabezalCaja
+            unacaja.id = CInt(unafila.Item("cabezal_caja_id"))
+            unacaja.descripcion = CStr(unafila.Item("cabezal_caja_des"))
+            unacaja.fecha = CDate(unafila.Item("cabezal_caja_fecha"))
+        End If
+        Return unacaja
+
+    End Function
+
+    Public Function TodasLasCabezalCajas() As List(Of caja)
+        Dim cadenaConsulta As String, colRetorno As New List(Of caja)
+        cadenaConsulta = "Select * from cajas order by cajas_id"
+        Dim dscajas As DataSet
+        dscajas = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unacaja As caja
+        For Each unaFila In dscajas.Tables(0).Rows
+            unacaja = New caja
+            unacaja.id = CInt(unaFila.Item("cajas_id"))
+            unacaja.idcaja = CInt(unaFila.Item("cajas_numero"))
+            unacaja.contiene = CStr(unaFila.Item("cajas_contiene"))
+            unacaja.fecha = CDate(unaFila.Item("cajas_fecha"))
+            unacaja.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+            unacaja.desde = CDate(unaFila.Item("cajas_desde"))
+            unacaja.hasta = CDate(unaFila.Item("cajas_hasta"))
+            colRetorno.Add(unacaja)
+            unacaja = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Function BuscarCabezalCajasFechas(ByVal ini As Date, ByVal pparametro As String) As List(Of caja)
+        Dim colRetorno As New List(Of caja)
+        Dim cadenaConsulta As String
+        If pparametro.Length > 0 Then
+            cadenaConsulta = "select * from cajas where cajas_desde>= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_hasta <#" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_contiene =" & "'" & pparametro & "'" & "order by cajas_id"
+        Else
+            cadenaConsulta = "select * from cajas where cajas_desde>= #" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# and cajas_hasta <#" & ini.Month & "/" & ini.Day & "/" & ini.Year & "# order by cajas_id"
+        End If
+        Dim dscajas As DataSet
+        Dim unpcajas As New Persistencia.pcaja
+        dscajas = unpcajas.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unregistro As caja
+        For Each unaFila In dscajas.Tables(0).Rows
+            unregistro = New caja
+            unregistro.id = CInt(unaFila.Item("cajas_id"))
+            unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+            unregistro.contiene = CStr(unaFila.Item("cajas_contiene"))
+            unregistro.fecha = CDate(unaFila.Item("cajas_fecha"))
+            unregistro.ubicacion = CStr(unaFila.Item("cajas_ubi"))
+            unregistro.desde = CDate(unaFila.Item("cajas_desde"))
+            unregistro.hasta = CDate(unaFila.Item("cajas_hasta"))
+            unregistro.idcaja = CInt(unaFila.Item("cajas_numero"))
+            colRetorno.Add(unregistro)
+            unregistro = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+
+
+#End Region
+
+#Region "Parametros"
+
+    Public Function BuscarParametros(ByVal pNombreParametro As String) As Parametros
+        Dim unpparametro As Persistencia.pParametro = New Persistencia.pParametro
+        Dim unparametro As Parametros, unDs As DataSet
+        If pNombreParametro = "" Then
+        Else
+            Dim cadena As String = "select * from Parametros where NombreParametro =" & "'" & pNombreParametro & "'"
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unparametro = New Parametros(CType(unafila.Item("NombreParametro"), String), CType(unafila.Item("ValorParametro"), String), CType(unafila.Item("DescripcionParametro"), String))
+            End If
+            Return unparametro
+        End If
+
+    End Function
+
+    Public Function ModificarParametros(ByVal unparametro As Parametros) As Boolean
+        If unparametro.Equals(BuscarParametros(unparametro.NombreParametro)) Then
+            Return False
+        Else
+            unparametro.Modificar()
+            Return True
+        End If
+    End Function
+
+    Public Function TodosLosParametros() As List(Of Parametros)
+        Dim cadenaConsulta As String, colRetorno As New List(Of Parametros)
+        cadenaConsulta = "Select * from Parametros order by NombreParametro"
+        Dim dsparametros As DataSet
+        dsparametros = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unparametro As Parametros
+        For Each unaFila In dsparametros.Tables(0).Rows
+            unparametro = New Parametros
+            unparametro.NombreParametro = CStr(unaFila.Item("NombreParametro"))
+            unparametro.ValorParametro = CStr(unaFila.Item("ValorParametro"))
+            unparametro.DescripcionParametro = CStr(unaFila.Item("DescripcionParametro"))
+            colRetorno.Add(unparametro)
+            unparametro = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Function TraerIdEtiquetas() As Integer
+        Dim unetiqueta As New Etiqueta
+        Return unetiqueta.ProximoId
+    End Function
+
+    Public Function TraerIdCabezalCajas() As Integer
+        Dim uncabezalcaja As New CabezalCaja
+        Return uncabezalcaja.ProximoId
+    End Function
+
+    Public Function TraerIdCajaslineas() As Integer
+        Dim unalineacaja As New caja
+        Return unalineacaja.ProximoId
+    End Function
+
+    Public Function TraerIdConceptos() As Integer
+        Dim unconcepto As New Concepto
+        Return unconcepto.ProximoId
+    End Function
+
+
+#End Region
+
+
+#Region "Conceptos"
+
+
+    Public Function Agregarconcepto(ByVal unconcepto As Concepto) As Boolean
+        Return unconcepto.Guardar()
+    End Function
+
+    Public Function Buscarconceptos(ByVal pid As String) As Concepto
+        Dim unpconcepto As Persistencia.pConcepto = New Persistencia.pConcepto
+        Dim unconcepto As Concepto, unDs As DataSet
+        If pid = "" Then
+        Else
+            Dim cadena As String = "select * from conceptos where mon_id =" & pid
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unconcepto = New Concepto(CType(unafila.Item("mon_id"), Integer), CType(unafila.Item("mon_nombre"), String), CType(unafila.Item("mon_descripcion"), String), CType(unafila.Item("mon_fechaMod"), Date))
+            End If
+            Return unconcepto
+        End If
+    End Function
+
+    Public Function BuscarconceptosId(ByVal pnombre As String) As Integer
+        Dim unpconcepto As Persistencia.pConcepto = New Persistencia.pConcepto
+        Dim idconcepto As Integer, unDs As DataSet
+        If pnombre = "" Then
+        Else
+            Dim cadena As String = "select * from conceptos where mon_nombre =" & "'" & pnombre & "'"
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                idconcepto = (unafila.Item("mon_id"))
+            End If
+            Return idconcepto
+        End If
+    End Function
+
+    Public Function BuscarSiExisteNombreconcepto(ByVal pnom As String) As Boolean
+        Dim unpconcepto As Persistencia.pConcepto = New Persistencia.pConcepto
+        Dim unDs As DataSet
+        Dim cadena As String = "select * from conceptos where mon_nombre =" & "'" & pnom & "'"
+        unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+        If unDs.Tables(0).Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+    Public Function Modificarconceptos(ByVal unconcepto As Concepto) As Boolean
+        If unconcepto.Equals(Buscarconceptos(unconcepto.id)) Then
+            Return False
+        Else
+            unconcepto.Modificar()
+            Return True
+        End If
+    End Function
+
+    Public Function TodosLosconceptos() As List(Of Concepto)
+        Dim cadenaConsulta As String, colRetorno As New List(Of Concepto)
+        cadenaConsulta = "Select * from conceptos order by mon_nombre"
+        Dim dsconcepto As DataSet
+        dsconcepto = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadenaConsulta)
+        Dim unaFila As DataRow
+        Dim unconcepto As Concepto
+        For Each unaFila In dsconcepto.Tables(0).Rows
+            unconcepto = New Concepto
+            unconcepto.id = CInt(unaFila.Item("mon_id"))
+            unconcepto.nombre = CStr(unaFila.Item("mon_nombre"))
+            unconcepto.descripcion = CStr(unaFila.Item("mon_descripcion"))
+            unconcepto.fecha = CDate(unaFila.Item("mon_fechaMod"))
+
+            colRetorno.Add(unconcepto)
+            unconcepto = Nothing
+        Next
+        Return colRetorno
+    End Function
+
+    Public Function BuscarconceptoxNombre(ByVal pnom As String) As Concepto
+        Dim unpconcepto As Persistencia.pConcepto = New Persistencia.pConcepto
+        Dim unconcepto As Concepto, unDs As DataSet
+        If pnom = "" Then
+        Else
+            Dim cadena As String = "select * from conceptos where mon_nombre =" & "'" & pnom & "'"
+            unDs = Persistencia.pPersistente.EjecutarSQLSERVIDORCAJAS(cadena)
+            If unDs.Tables(0).Rows.Count > 0 Then
+                Dim unafila As DataRow = unDs.Tables(0).Rows(0)
+                unconcepto = New Concepto(CType(unafila.Item("mon_id"), String), CType(unafila.Item("mon_nombre"), String), CType(unafila.Item("mon_descripcion"), String), CType(unafila.Item("mon_fechaMod"), Date))
+            End If
+            Return unconcepto
+        End If
+    End Function
+
+#Region "  FUNCIONES VARIADAS"
+
+
+    Public Function enviar_mail(ByVal i_de As String, ByVal i_para As String, ByVal asunto As String, ByVal mensaje As String, ByVal pArchivo As String, ByVal pArchivo2 As String) As Boolean
+        Dim bandera As Boolean = True
+        Dim att As System.Net.Mail.Attachment
+        If pArchivo.Length > 3 Then
+            att = New System.Net.Mail.Attachment(Environment.CurrentDirectory & "\" & pArchivo)
+        End If
+        Dim att2 As New System.Net.Mail.Attachment(Environment.CurrentDirectory & "\" & pArchivo2)
+        'Dim insMail As New MailMessage(New MailAddress(i_de), New MailAddress(i_para))
+        Dim insMail As New MailMessage()
+        '   insMail.From.Address(i_de)
+
+        Dim destinatarios As String = i_para
+        For Each mail As String In destinatarios.Split(New Char(), ";")
+            insMail.To.Add(New System.Net.Mail.MailAddress(mail))
+        Next
+
+        With insMail
+            .Subject = asunto
+            .IsBodyHtml = True 'envia el mensaje como html
+            .Body = mensaje
+            .From = New MailAddress(i_de)
+            .ReplyTo = New MailAddress(i_de)
+            If pArchivo.Length > 3 Then
+                .Attachments.Add(att)
+            End If
+            .Attachments.Add(att2)
+
+        End With
+        Dim smtp As New System.Net.Mail.SmtpClient
+        'smtp.Host = "smtp.gmail.com"
+        smtp.Host = "frigoyi.com.uy"
+        'smtp.Port = 587
+        smtp.Port = 25
+        smtp.EnableSsl = False
+        smtp.UseDefaultCredentials = False
+        smtp.Credentials = New System.Net.NetworkCredential("info@frigoyi.com.uy", "Frigo1234")
+
+        Try
+            smtp.Send(insMail)
+        Catch ex As Exception
+            bandera = False
+        End Try
+        Return bandera
+
+    End Function
+
+    Public Function LeerTXTaString(ByVal SPath As String) As String
+        Try
+            Dim sContent As String = vbNullString
+
+            With My.Computer.FileSystem
+                ' verifica si existe el path  
+                If .FileExists(SPath) Then
+                    ' lee todo el contenido  
+                    sContent = .ReadAllText(SPath)
+                    Return sContent
+                Else
+                    Return ""
+                End If
+            End With
+            ' errores  
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString, MsgBoxStyle.Critical)
+        End Try
+    End Function
+
+    Public Function GuardarInformados(ByVal unInformado As Informados) As String
+        Me.listaInformados.Add(unInformado)
+
+        AgregarLineasTxtInformados(Me.listaInformados)
+    End Function
+
+    Public Function AgregarLineasTxtInformados(ByVal lista As List(Of Informados)) As Boolean
+        Dim i As Integer = 0
+        Dim sw As New StreamWriter(("Informados.txt"))
+        i = 0
+        For i = 0 To lista.Count - 1
+            sw.WriteLine(lista.Item(i).Operario)
+            'sw.WriteLine(lista.Item(i).Operario & ";" & lista.Item(i).fecha & ";" & lista.Item(i).jornales)
+        Next
+        sw.Close()
+    End Function
+
+
+    Public Function BuscarInformados(ByVal pOperario As Integer) As Boolean
+        Dim bandera As Boolean = False
+        If Me.listaInformados.Count > 0 Then
+            Dim i As Integer = 0
+            For i = 0 To Me.listaInformados.Count - 1
+                If listaInformados.Item(i).Operario = pOperario Then
+                    bandera = True
+                End If
+            Next
+        End If
+        Return bandera
+    End Function
+
+
+    Public Function BuscarEnlista(ByVal pOperario As Integer) As Boolean
+        Dim bandera As Boolean = False
+        If Me.listaInformados.Count > 0 Then
+            Dim i As Integer = 0
+            For i = 0 To Me.listaInformados.Count - 1
+                If listaInformados.Item(i).Operario = pOperario Then
+                    bandera = True
+                End If
+            Next
+        End If
+        Return bandera
+    End Function
+
+
+    Public Function listarLineasTxtInformados() As List(Of String)
+        Dim sr As StreamReader
+        sr = New StreamReader("Informados.txt")
+        Dim Line As String = sr.ReadLine()
+        Dim lista As New List(Of String)
+        While Not (Line Is Nothing)
+            lista.Add(Line)
+            Line = sr.ReadLine()
+        End While
+        sr.Close()
+        Return lista
+    End Function
+
+
+    Public Function BuscarInformadosenTXT(ByVal valor As Integer) As Boolean
+        'Recorro archivo txt y paso a Arraylist
+        Dim bandera As Boolean = False
+        Dim lista As List(Of String)
+        Dim NumOperario As String
+        Dim NombreArchivo As String = "Informados"
+        If Me.listaInformados.Count > 0 Then
+            lista = listarLineasTxtInformados()
+        End If
+
+        If lista IsNot Nothing Then
+            Dim i As Integer = 0
+            Do While i < lista.Count And Not bandera
+                If lista.Item(i).StartsWith(valor) Then
+                    NumOperario = lista.Item(i).Substring(lista.Item(i).IndexOf(";") + 1) & Chr(13)
+                    bandera = True
+                End If
+                i += 1
+            Loop
+        Else
+            bandera = False
+        End If
+
+        Return bandera
+    End Function
+
+    Public Function CargarListaInformados() As List(Of Informados)
+        'Recorro archivo txt y paso a Arraylist
+        Dim bandera As Boolean = False
+        Dim listaAuxInformados As List(Of String)
+        Dim listaInformadosTXT As New List(Of Informados)
+
+        Dim NumOperario As String
+        Dim fecha As String
+        Dim jornal As String
+
+        '   Dim NombreArchivo As String = "Informados"
+        listaAuxInformados = listarLineasTxtInformados()
+        If listaAuxInformados.Count > 0 Then
+            Dim i As Integer = 0
+            Do While i < listaAuxInformados.Count
+
+                NumOperario = listaAuxInformados.Item(i).Substring(0, 3)
+                'fecha = listaAuxInformados.Item(i).Substring(5, 18)
+                'jornal = listaAuxInformados.Item(i).Substring(24, 2)
+
+                Dim unInformado As New Informados(NumOperario)
+
+                listaInformadosTXT.Add(unInformado)
+                i += 1
+            Loop
+        End If
+        Return listaInformadosTXT
+    End Function
+
+
+
+
+
+
+
+
+
+#End Region
+
+
+
+#End Region
+
+
+
+
+End Class

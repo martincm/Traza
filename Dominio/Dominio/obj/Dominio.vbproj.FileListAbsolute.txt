@@ -1,0 +1,171 @@
+D:\Etiquetas\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+D:\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+D:\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.pdb
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.xml
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dac.dll
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.dll
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dac.pdb
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Dac.xml
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.pdb
+D:\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.xml
+D:\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.dll
+D:\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.xml
+D:\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll.config
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.dll.config
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.XmlSerializers.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll.config
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Debug\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.dll.config
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\obj\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Ionic.Zip.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Ionic.Zip.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll.config
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dominio.dll.config
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Ionic.Zip.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Ionic.Zip.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\bin\Release\Ionic.Zip.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.Resources.resources
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Dominio\Dominio\obj\Release\Dominio.XmlSerializers.dll

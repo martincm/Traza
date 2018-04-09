@@ -1,0 +1,125 @@
+D:\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll.config
+D:\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll
+D:\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.pdb
+D:\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.xml
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\ResolveAssemblyReference.cache
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.Resources.resources
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.dll
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.xml
+D:\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll.config
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadas.rpt
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll.config
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadas.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadasResumen.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteResumenLlamadas.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll.config
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadas.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadasResumen.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteResumenLlamadas.rpt
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll.config
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadas.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadasResumen.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteResumenLlamadas.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll.config
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadas.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadasResumen.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteResumenLlamadas.rpt
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll.config
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Debug\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadas.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteLlamadasResumen.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.ReporteResumenLlamadas.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Debug\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll.config
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\bin\Release\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadas.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteLlamadasResumen.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.ReporteResumenLlamadas.rpt
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Etiquetas\Dac\obj\Release\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dac\bin\Debug\Dac.dll.config
+F:\Martin\Programacion\Frigoyi\Dac\bin\Debug\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dac\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dac\bin\Debug\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.ReporteLlamadas.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.ReporteLlamadasResumen.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.ReporteResumenLlamadas.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.Resources.resources
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dac\obj\Debug\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dac\bin\Release\Dac.dll.config
+F:\Martin\Programacion\Frigoyi\Dac\bin\Release\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dac\bin\Release\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Dac\bin\Release\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.ReporteLlamadas.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.ReporteLlamadasResumen.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.ReporteResumenLlamadas.rpt
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.Resources.resources
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.dll
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.xml
+F:\Martin\Programacion\Frigoyi\Dac\obj\Release\Dac.pdb

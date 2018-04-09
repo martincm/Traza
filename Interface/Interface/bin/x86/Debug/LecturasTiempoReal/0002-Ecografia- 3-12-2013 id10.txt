@@ -1,0 +1,3 @@
+Titulo;Ecografia;11/12/2013 07:14:07 p.m.;2
+858000007502355;Hembra;AA;48;22;Flaca;0;6;Estado Corporal;11/12/2013 07:14:36 p.m.
+858000007502344;Macho;AA;48;24;Moderada;0;6;Estado Corporal;11/12/2013 07:21:01 p.m.

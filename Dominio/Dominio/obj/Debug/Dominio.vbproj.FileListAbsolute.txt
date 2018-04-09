@@ -1,0 +1,88 @@
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.pdb
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\office.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\office.xml
+C:\Users\Martin\Desktop\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.vbproj.ResolveComReference.cache
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\bin\Debug\Interop.NiceLabel5WR.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Frigoyi\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\ResGen.read.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\ResGen.write.1.tlog
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Ionic.Zip.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\MySql.Data.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Dac.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.pdb
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\bin\Debug\Persistencia.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Users\Martin\Documents\Martin\Sistema Trazabilidad\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.vbprojResolveAssemblyReference.cache
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.pdb

@@ -1,0 +1,352 @@
+D:\Etiquetas\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.Inicio.resources
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.Resources.resources
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+D:\Etiquetas\Interface\Interface\bin\Debug\Interface.exe
+D:\Etiquetas\Interface\Interface\bin\Debug\Interface.pdb
+D:\Etiquetas\Interface\Interface\bin\Debug\Interface.xml
+D:\Etiquetas\Interface\Interface\bin\Debug\Dac.dll
+D:\Etiquetas\Interface\Interface\bin\Debug\Dominio.dll
+D:\Etiquetas\Interface\Interface\bin\Debug\Persistencia.dll
+D:\Etiquetas\Interface\Interface\bin\Debug\Persistencia.pdb
+D:\Etiquetas\Interface\Interface\bin\Debug\Persistencia.xml
+D:\Etiquetas\Interface\Interface\bin\Debug\Dominio.pdb
+D:\Etiquetas\Interface\Interface\bin\Debug\Dominio.xml
+D:\Etiquetas\Interface\Interface\bin\Debug\Dac.pdb
+D:\Etiquetas\Interface\Interface\bin\Debug\Dac.xml
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.VistaPrevia.resources
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.exe
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.xml
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.pdb
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.IUIngresoEtiquetas.resources
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.IUMenu.resources
+D:\Etiquetas\Interface\Interface\obj\Debug\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Balanza.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImpresiones.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImprimirEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUIngresoEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUMenu.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUReporte.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.VistaPrevia.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Balanza.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImpresiones.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImprimirEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUIngresoEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUMenu.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUReporte.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUReporteResumen.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.VistaPrevia.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Archivo.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\DevComponents.DotNetBar2.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\DevComponents.DotNetBar2.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Archivo.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Balanza.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUImpresiones.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUImprimirEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUIngresoEtiquetas.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUMenu.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUReporte.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUReporteResumen.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.VistaPrevia.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Resources.resources
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.exe
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.xml
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.pdb
+C:\Documents and Settings\Administrador\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.prueba.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.exe
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.exe
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Interface.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Archivo.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Balanza.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImpresiones.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUImprimirEtiquetas.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUIngresoEtiquetas.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUMenu.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUReporte.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.IUReporteResumen.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.prueba.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.VistaPrevia.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.exe
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Interface.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.XmlSerializers.dll
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Archivo.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Balanza.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUImpresiones.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUImprimirEtiquetas.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUIngresoEtiquetas.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUMenu.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUModificarParametros.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUReporte.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.IUReporteResumen.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.prueba.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.VistaPrevia.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.Resources.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.exe
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.xml
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.pdb
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.Actualiza.resources
+C:\Documents and Settings\Administrador.DESKTOP\Escritorio\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.sorteo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dac.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Interface.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\DevComponents.DotNetBar2.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\DevComponents.DotNetBar2.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Inicio.exe
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Inicio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Inicio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.Actualiza.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.Archivo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.Balanza.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.BalanzaCamiones.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUAusentismo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUAvisos.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUCaravanas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUHorasNoProd.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUImpresiones.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUImprimirEtiquetas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUIngresoEtiquetas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUInternet.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUReporte.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUReporteResumen.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.IUTransferencias.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.prueba.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.sorteo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.VistaPrevia.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.exe
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Debug\Inicio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Inicio.exe
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Inicio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Release\Inicio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.Actualiza.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.Archivo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.Balanza.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.BalanzaCamiones.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUAusentismo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUAvisos.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUCaravanas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUHorasNoProd.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUImpresiones.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUImprimirEtiquetas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUIngresoEtiquetas.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUInternet.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUMenu.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUModificarParametros.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUReporte.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUReporteResumen.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.IUTransferencias.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.prueba.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.sorteo.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.VistaPrevia.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.Resources.resources
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.exe
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.xml
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\obj\Release\Inicio.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Ionic.Zip.dll
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Ionic.Zip.pdb
+F:\Martin\Programacion\Etiquetas\Etiquetas\Etiquetas\Interface\Interface\bin\Debug\Ionic.Zip.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.exe
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Inicio.exe
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Inicio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Inicio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dac.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Ionic.Zip.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dac.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Debug\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.Actualiza.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.Archivo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.Balanza.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.BalanzaCamiones.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAusentismo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUAvisos.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUCaravanas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUHorasNoProd.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImpresiones.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUImprimirEtiquetas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUIngresoEtiquetas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUInternet.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUMenu.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUModificarParametros.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporte.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUReporteResumen.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUTransferencias.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.prueba.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.sorteo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.VistaPrevia.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.Resources.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Interface.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUBrou.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Inicio.exe
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Inicio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Inicio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dac.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\DevComponents.DotNetBar2.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dominio.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Ionic.Zip.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Persistencia.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Ionic.Zip.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Ionic.Zip.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dac.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dac.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\DevComponents.DotNetBar2.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Persistencia.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Persistencia.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dominio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dominio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\bin\Release\Dominio.XmlSerializers.dll
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\ResolveAssemblyReference.cache
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.Actualiza.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.Archivo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.Balanza.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.BalanzaCamiones.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUAusentismo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUAvisos.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUBrou.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUCaravanas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUHorasNoProd.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUImpresiones.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUImprimirEtiquetas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUIngresoEtiquetas.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUInternet.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUMenu.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUModificarParametros.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUReporte.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUReporteResumen.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUTransferencias.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.prueba.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.sorteo.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.VistaPrevia.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.Resources.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Interface.vbproj.GenerateResource.Cache
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.exe
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.xml
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.pdb
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.splash.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IULeerWebService.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.IUArmadoPallet.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IUArmadoPallet.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.IULeerWebService.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Release\Inicio.splash.resources
+F:\Martin\Programacion\Frigoyi\Interface\Interface\obj\Debug\Inicio.AFunciones.resources
