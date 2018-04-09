@@ -69,3 +69,17 @@ C:\Users\Martin\Desktop\Trazabilidad\Dac\obj\Debug\Dac.vbproj.GenerateResource.C
 C:\Users\Martin\Desktop\Trazabilidad\Dac\obj\Debug\Dac.dll
 C:\Users\Martin\Desktop\Trazabilidad\Dac\obj\Debug\Dac.xml
 C:\Users\Martin\Desktop\Trazabilidad\Dac\obj\Debug\Dac.pdb
+C:\GitHub\Traza\Dac\bin\Debug\Dac.dll.config
+C:\GitHub\Traza\Dac\bin\Debug\Dac.dll
+C:\GitHub\Traza\Dac\bin\Debug\Dac.pdb
+C:\GitHub\Traza\Dac\bin\Debug\Dac.xml
+C:\GitHub\Traza\Dac\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\GitHub\Traza\Dac\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\GitHub\Traza\Dac\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\GitHub\Traza\Dac\bin\Debug\stdole.dll
+C:\GitHub\Traza\Dac\obj\Debug\Dac.vbprojResolveAssemblyReference.cache
+C:\GitHub\Traza\Dac\obj\Debug\Dac.Resources.resources
+C:\GitHub\Traza\Dac\obj\Debug\Dac.vbproj.GenerateResource.Cache
+C:\GitHub\Traza\Dac\obj\Debug\Dac.dll
+C:\GitHub\Traza\Dac\obj\Debug\Dac.xml
+C:\GitHub\Traza\Dac\obj\Debug\Dac.pdb

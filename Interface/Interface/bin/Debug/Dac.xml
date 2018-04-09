@@ -6,6 +6,22 @@ Dac
 </name>
 </assembly>
 <members>
+<member name="T:Dac.My.Resources.Resources">
+<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Dac.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Dac.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member>
 <member name="T:Dac.DsCaravanas">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -159,22 +175,6 @@ Row event argument class
 <member name="T:Dac.DsParametroTableAdapters.ParametrosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Dac.My.Resources.Resources">
-<summary>
-  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
-</summary>
-</member>
-<member name="P:Dac.My.Resources.Resources.ResourceManager">
-<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
-</summary>
-</member>
-<member name="P:Dac.My.Resources.Resources.Culture">
-<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
 </summary>
 </member>
 </members>

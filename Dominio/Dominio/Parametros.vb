@@ -78,24 +78,24 @@ Public Class Parametros
     End Sub
 
     Function ToDatarow() As DataRow
-        Dim tabla As New parametrosDataTable
-        Dim unaFila As parametrosRow = tabla.NewparametrosRow()
-        unaFila.NombreParametro = Me.NombreParametro
-        unaFila.ValorParametro = Me.ValorParametro
-        unaFila.DescripcionParametro = Me.DescripcionParametro
-        Return unaFila
+        'Dim tabla As New parametrosDataTable
+        'Dim unaFila As parametrosRow = tabla.NewparametrosRow()
+        'unaFila.NombreParametro = Me.NombreParametro
+        'unaFila.ValorParametro = Me.ValorParametro
+        'unaFila.DescripcionParametro = Me.DescripcionParametro
+        'Return unaFila
     End Function
 
 
     Public Function ToDataSet() As DataSet
-        Dim ds As New Dac.DsParametro
-        Dim nuevoparametros As Dac.DsParametro.ParametrosRow
-        nuevoparametros = ds.parametros.NewparametrosRow
-        nuevoparametros.NombreParametro = Me.NombreParametro
-        nuevoparametros.ValorParametro = Me.ValorParametro
-        nuevoparametros.DescripcionParametro = Me.DescripcionParametro
-        ds.Parametros.Rows.Add(nuevoparametros)
-        Return ds
+        'Dim ds As New Dac.DsParametro
+        'Dim nuevoparametros As Dac.DsParametro.ParametrosRow
+        'nuevoparametros = ds.parametros.NewparametrosRow
+        'nuevoparametros.NombreParametro = Me.NombreParametro
+        'nuevoparametros.ValorParametro = Me.ValorParametro
+        'nuevoparametros.DescripcionParametro = Me.DescripcionParametro
+        'ds.Parametros.Rows.Add(nuevoparametros)
+        'Return ds
     End Function
 
 #End Region

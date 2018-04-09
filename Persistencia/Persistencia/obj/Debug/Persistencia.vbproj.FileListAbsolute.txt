@@ -56,3 +56,9 @@ C:\Users\Martin\Desktop\Trazabilidad\Persistencia\Persistencia\obj\Debug\Persist
 C:\Users\Martin\Desktop\Trazabilidad\Persistencia\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Martin\Desktop\Trazabilidad\Persistencia\Persistencia\obj\Debug\Persistencia.xml
 C:\Users\Martin\Desktop\Trazabilidad\Persistencia\Persistencia\obj\Debug\Persistencia.pdb
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.vbprojResolveAssemblyReference.cache
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.Resources.resources
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.Cache
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.dll
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.xml
+C:\GitHub\Traza\Persistencia\Persistencia\obj\Debug\Persistencia.pdb

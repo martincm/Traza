@@ -86,3 +86,9 @@ C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.vbproj.Ge
 C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.dll
 C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.xml
 C:\Users\Martin\Desktop\Trazabilidad\Dominio\Dominio\obj\Debug\Dominio.pdb
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.vbprojResolveAssemblyReference.cache
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.Resources.resources
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.Cache
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.dll
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.xml
+C:\GitHub\Traza\Dominio\Dominio\obj\Debug\Dominio.pdb
