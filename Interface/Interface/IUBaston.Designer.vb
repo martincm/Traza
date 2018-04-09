@@ -106,7 +106,7 @@ Partial Class IUBaston
         '
         Me.btnEnviar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnEnviar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnEnviar.Location = New System.Drawing.Point(467, 84)
+        Me.btnEnviar.Location = New System.Drawing.Point(467, 88)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(119, 27)
         Me.btnEnviar.TabIndex = 461
