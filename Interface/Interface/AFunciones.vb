@@ -660,7 +660,7 @@ Public Class AFunciones
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(384, 294)
+        Me.Button1.Location = New System.Drawing.Point(441, 256)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(134, 26)
         Me.Button1.TabIndex = 502
