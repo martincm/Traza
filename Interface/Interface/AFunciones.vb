@@ -34,6 +34,7 @@ Public Class AFunciones
     Friend WithEvents lote As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents fecha As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents chk As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Button1 As Button
     Friend WithEvents dtgvEventos As System.Windows.Forms.DataGridView
 
 
@@ -435,6 +436,7 @@ Public Class AFunciones
         Me.trazabilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdLinea = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DiasUbicacionActual = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dtgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -656,9 +658,19 @@ Public Class AFunciones
         Me.DiasUbicacionActual.Name = "DiasUbicacionActual"
         Me.DiasUbicacionActual.Width = 150
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(384, 294)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(134, 38)
+        Me.Button1.TabIndex = 502
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AFunciones
         '
         Me.ClientSize = New System.Drawing.Size(691, 374)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dtgvEventos)
         Me.Name = "AFunciones"
         CType(Me.dtgvEventos, System.ComponentModel.ISupportInitialize).EndInit()
