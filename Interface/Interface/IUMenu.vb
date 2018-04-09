@@ -56,7 +56,7 @@ Public Class IUMenu
         Me.StatusLabel.Text = "Tipo Base Datos: " & unafachada.TipoBaseDatos
         Dim obs As String = ""
         MsgBox("Modificacion desde Pc Toshiba; Laptop")
-        MsgBox("Es un mensaje importante:")
+        MsgBox("es un mensaje desde HP")
 
     End Sub
 
