@@ -55,7 +55,7 @@ Public Class IUMenu
     Private Sub IUMenu_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.StatusLabel.Text = "Tipo Base Datos: " & unafachada.TipoBaseDatos
         Dim obs As String = ""
-        MsgBox("Hola mundo")
+        MsgBox("HP")
     End Sub
 
     Private Sub ConfiguracionToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ConfiguracionToolStripMenuItem.Click
