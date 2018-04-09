@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://gateway/inacapi/entradas" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://gateway/inacapi/entradas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://gateway/inacapi/entradas">
+      <s:element name="Cabezal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Tropa" type="tns:CabezalTropa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CabezalTropa">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FechaRecepcion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AnimalCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TropaNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="TropaDesc" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DicoseCodigo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FaenaTipo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductorDicose" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductorRUC" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductorNombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductorDepartamento" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ConsignatarioCodigo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ConsignatarioDicoseCodigo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ConsignatarioNombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ConsignatarioDepartamento" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosRUC" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TercerosNombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosDepartamento" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MonedaCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MonedaFlete" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FleteCargo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoModo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoDias" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoTipo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Transportes" type="tns:ArrayOfTransporte" />
+              <s:element minOccurs="0" maxOccurs="1" name="Guias" type="tns:ArrayOfGuia" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BD" />
+      <s:complexType name="Guia">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DicoseGuiaNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Transporte">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TransporteCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransporteRUC" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransporteNombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransporteDepartamento" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransporte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Transporte" nillable="true" type="tns:Transporte" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGuia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Guia" nillable="true" type="tns:Guia" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CabezalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CabezalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductoDespacho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Producto" type="tns:ProductosDespacho" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductosDespacho">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductoCodigo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProductoDespachoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProductoDespachoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Lotes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Tropa" type="tns:LotesTropa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LotesTropa">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TropaNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Lotes" type="tns:ArrayOfLote" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfLote">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Lote" nillable="true" type="tns:Lote" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Lote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="LoteNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CategoriaCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="RazaCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Vivos" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Muertos" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Rechazados" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MuertosEnProceso" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoFaena" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LotesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LotesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProgramaFaenas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Programa" type="tns:ProgramaFaena" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProgramaFaena">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FechaFaena" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Grupos" type="tns:ArrayOfGrupo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfGrupo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Grupo" nillable="true" type="tns:Grupo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Grupo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Secuencia" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TropaNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LoteNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProgramaFaenasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProgramaFaenasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BoletoCompraVentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Tropa" type="tns:BoletoCompraVenta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BoletoCompraVenta">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TropaNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Renglones" type="tns:ArrayOfRenglon" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfRenglon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Renglon" nillable="true" type="tns:Renglon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Renglon">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AnimalBatchNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubCategCode" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PriceKg" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ScaleKg_1" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ScaleKg_2" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ScaleKg_3" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BreedType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CriPay" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PayType" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Conformation" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="BoletoCompraVentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BoletoCompraVentasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CabezalBoletoCompraVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="TropaBoleto" type="tns:CabezalBoletoCompraVenta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CabezalBoletoCompraVenta">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TropaNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PurchaseStatus" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoFaena" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosRUC" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TercerosNombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TercerosDepartamento" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CargoFlete" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MonedaFlete" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MonedaCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoModo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoDias" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumeroBoleto" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaBoleto" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CabezalBoletoCompraVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CabezalBoletoCompraVentaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pallets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Pallet" type="tns:Pallet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Pallet">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="PalletNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PalletStatus" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductCode" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cajas" type="tns:ArrayOfPalletCaja" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfPalletCaja">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Caja" nillable="true" type="tns:PalletCaja" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PalletCaja">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="BoxNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PalletsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PalletsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductoDesosado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Producto" type="tns:ProductoDesosado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductoDesosado">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductoCodigo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NoPieces" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo1" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo2" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo3" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo4" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo5" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo6" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo7" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo8" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo9" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo10" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrevDotNo11" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProductoDesosadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProductoDesosadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DestinoDesosado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Destino" type="tns:DestinoDesosado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DestinoDesosado">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="DestinoCodigo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DestinoDesosadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DestinoDesosadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegTypeDesosado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="RegTypeDes" type="tns:RegTypeDesosado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegTypeDesosado">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="RegType" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RegTypeDesosadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegTypeDesosadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegTypeDespacho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="RegTypeDespa" type="tns:RegTypeDespacho" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegTypeDespacho">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BD">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DotNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="RegType" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RegTypeDespachoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegTypeDespachoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CabezalSoapIn">
+    <wsdl:part name="parameters" element="tns:Cabezal" />
+  </wsdl:message>
+  <wsdl:message name="CabezalSoapOut">
+    <wsdl:part name="parameters" element="tns:CabezalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProductoDespachoSoapIn">
+    <wsdl:part name="parameters" element="tns:ProductoDespacho" />
+  </wsdl:message>
+  <wsdl:message name="ProductoDespachoSoapOut">
+    <wsdl:part name="parameters" element="tns:ProductoDespachoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LotesSoapIn">
+    <wsdl:part name="parameters" element="tns:Lotes" />
+  </wsdl:message>
+  <wsdl:message name="LotesSoapOut">
+    <wsdl:part name="parameters" element="tns:LotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProgramaFaenasSoapIn">
+    <wsdl:part name="parameters" element="tns:ProgramaFaenas" />
+  </wsdl:message>
+  <wsdl:message name="ProgramaFaenasSoapOut">
+    <wsdl:part name="parameters" element="tns:ProgramaFaenasResponse" />
+  </wsdl:message>
+  <wsdl:message name="BoletoCompraVentasSoapIn">
+    <wsdl:part name="parameters" element="tns:BoletoCompraVentas" />
+  </wsdl:message>
+  <wsdl:message name="BoletoCompraVentasSoapOut">
+    <wsdl:part name="parameters" element="tns:BoletoCompraVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CabezalBoletoCompraVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:CabezalBoletoCompraVenta" />
+  </wsdl:message>
+  <wsdl:message name="CabezalBoletoCompraVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:CabezalBoletoCompraVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PalletsSoapIn">
+    <wsdl:part name="parameters" element="tns:Pallets" />
+  </wsdl:message>
+  <wsdl:message name="PalletsSoapOut">
+    <wsdl:part name="parameters" element="tns:PalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProductoDesosadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ProductoDesosado" />
+  </wsdl:message>
+  <wsdl:message name="ProductoDesosadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ProductoDesosadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DestinoDesosadoSoapIn">
+    <wsdl:part name="parameters" element="tns:DestinoDesosado" />
+  </wsdl:message>
+  <wsdl:message name="DestinoDesosadoSoapOut">
+    <wsdl:part name="parameters" element="tns:DestinoDesosadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegTypeDesosadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegTypeDesosado" />
+  </wsdl:message>
+  <wsdl:message name="RegTypeDesosadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegTypeDesosadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegTypeDespachoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegTypeDespacho" />
+  </wsdl:message>
+  <wsdl:message name="RegTypeDespachoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegTypeDespachoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="entradasSoap">
+    <wsdl:operation name="Cabezal">
+      <wsdl:input message="tns:CabezalSoapIn" />
+      <wsdl:output message="tns:CabezalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductoDespacho">
+      <wsdl:input message="tns:ProductoDespachoSoapIn" />
+      <wsdl:output message="tns:ProductoDespachoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Lotes">
+      <wsdl:input message="tns:LotesSoapIn" />
+      <wsdl:output message="tns:LotesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProgramaFaena">
+      <wsdl:input name="ProgramaFaenas" message="tns:ProgramaFaenasSoapIn" />
+      <wsdl:output name="ProgramaFaenas" message="tns:ProgramaFaenasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BoletoCompraVenta">
+      <wsdl:input name="BoletoCompraVentas" message="tns:BoletoCompraVentasSoapIn" />
+      <wsdl:output name="BoletoCompraVentas" message="tns:BoletoCompraVentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CabezalBoletoCompraVenta">
+      <wsdl:input message="tns:CabezalBoletoCompraVentaSoapIn" />
+      <wsdl:output message="tns:CabezalBoletoCompraVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pallets">
+      <wsdl:input message="tns:PalletsSoapIn" />
+      <wsdl:output message="tns:PalletsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductoDesosado">
+      <wsdl:input message="tns:ProductoDesosadoSoapIn" />
+      <wsdl:output message="tns:ProductoDesosadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DestinoDesosado">
+      <wsdl:input message="tns:DestinoDesosadoSoapIn" />
+      <wsdl:output message="tns:DestinoDesosadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegTypeDesosado">
+      <wsdl:input message="tns:RegTypeDesosadoSoapIn" />
+      <wsdl:output message="tns:RegTypeDesosadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegTypeDespacho">
+      <wsdl:input message="tns:RegTypeDespachoSoapIn" />
+      <wsdl:output message="tns:RegTypeDespachoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="entradasHttpGet" />
+  <wsdl:portType name="entradasHttpPost" />
+  <wsdl:binding name="entradasSoap" type="tns:entradasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Cabezal">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/Cabezal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductoDespacho">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/ProductoDespacho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lotes">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/Lotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramaFaena">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/ProgramaFaenas" style="document" />
+      <wsdl:input name="ProgramaFaenas">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ProgramaFaenas">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoletoCompraVenta">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/BoletoCompraVentas" style="document" />
+      <wsdl:input name="BoletoCompraVentas">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="BoletoCompraVentas">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CabezalBoletoCompraVenta">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/CabezalBoletoCompraVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pallets">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/Pallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductoDesosado">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/ProductoDesosado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DestinoDesosado">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/DestinoDesosado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegTypeDesosado">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/RegTypeDesosado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegTypeDespacho">
+      <soap:operation soapAction="http://gateway/inacapi/entradas/RegTypeDespacho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="entradasHttpGet" type="tns:entradasHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="entradasHttpPost" type="tns:entradasHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="entradas">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="entradasSoap" binding="tns:entradasSoap">
+      <soap:address location="http://192.168.0.240/inacapi/entradas/Entradas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="entradasHttpGet" binding="tns:entradasHttpGet">
+      <http:address location="http://192.168.0.240/inacapi/entradas/Entradas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="entradasHttpPost" binding="tns:entradasHttpPost">
+      <http:address location="http://192.168.0.240/inacapi/entradas/Entradas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

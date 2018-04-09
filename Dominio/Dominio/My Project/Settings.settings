@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Dominio_Empaque_Salidas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.240/inacapi/salidas/Salidas.asmx</Value>
+    </Setting>
+    <Setting Name="Dominio_Entradas_entradas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.240/inacapi/entradas/Entradas.asmx</Value>
+    </Setting>
+    <Setting Name="Dominio_WebCaravanas_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.240/wscaravanas/Service.asmx</Value>
+    </Setting>
+    <Setting Name="Dominio_E_Factura_WS_eFactura" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://efactura.dgi.gub.uy:6443/ePrueba/ws_eprueba</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
