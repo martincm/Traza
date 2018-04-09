@@ -96,6 +96,8 @@ Public Class Parametros
         'nuevoparametros.DescripcionParametro = Me.DescripcionParametro
         'ds.Parametros.Rows.Add(nuevoparametros)
         'Return ds
+        'Copmentariio
+
     End Function
 
 #End Region
