@@ -56,6 +56,8 @@ Public Class IUMenu
         Me.StatusLabel.Text = "Tipo Base Datos: " & unafachada.TipoBaseDatos
         Dim obs As String = ""
         MsgBox("Modificacion desde Pc Toshiba; Laptop")
+        MsgBox("Ok")
+
     End Sub
 
     Private Sub ConfiguracionToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ConfiguracionToolStripMenuItem.Click
